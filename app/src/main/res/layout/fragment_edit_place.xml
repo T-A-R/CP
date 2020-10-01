@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cont"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/iceBlue"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="45dp"
+                android:text="@string/edit_place_title"
+                android:textColor="@android:color/black"
+                android:textSize="40sp" />
+
+            <LinearLayout
+                android:id="@+id/panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="125dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="35dp"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <irongate.checkpot.view.screens.delegate.editPlace.DetailBgTop
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="34dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/title_logo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="32dp"
+                            android:text="@string/edit_place_title_logo"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="18sp" />
+
+                        <RelativeLayout
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="20dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:srcCompat="@drawable/bg_circle_gray" />
+
+                            <ImageView
+                                android:id="@+id/img_logo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                mapbox:srcCompat="@drawable/bg_circle_gray" />
+
+                            <ImageView
+                                android:id="@+id/ico_upload_logo"
+                                android:layout_width="18dp"
+                                android:layout_height="22dp"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="30dp"
+                                android:tint="@color/blue"
+                                app:srcCompat="@drawable/ico_upload" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/title_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="24dp"
+                            android:text="@string/edit_place_title_name"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/edit_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="63dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@drawable/bg_selector_blue"
+                            android:ems="10"
+                            android:hint="@string/edit_place_hint_name"
+                            android:inputType="textCapSentences"
+                            android:padding="16dp"
+                            android:textSize="22sp"
+                            android:maxLength="26"/>
+
+                        <TextView
+                            android:id="@+id/title_photo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="24dp"
+                            android:text="@string/edit_place_title_photo"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="18sp"
+                            android:visibility="gone"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="175dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="20dp"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/img_photo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:srcCompat="@drawable/bg_frame_dotted_blue" />
+
+                            <ImageButton
+                                android:id="@+id/btn_load_photo"
+                                android:layout_width="46dp"
+                                android:layout_height="46dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="50dp"
+                                android:background="@drawable/bg_circle_blue"
+                                android:padding="12dp"
+                                android:scaleType="fitCenter"
+                                android:tint="@android:color/white"
+                                app:srcCompat="@drawable/ico_upload" />
+
+                            <TextView
+                                android:id="@+id/title_load_photo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="108dp"
+                                android:text="@string/edit_place_load_photo"
+                                android:textColor="@color/blue"
+                                android:textSize="22sp" />
+                        </RelativeLayout>
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:id="@+id/linear_mini"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal" />
+                        </HorizontalScrollView>
+
+                    </LinearLayout>
+
+                </irongate.checkpot.view.screens.delegate.editPlace.DetailBgTop>
+
+                <irongate.checkpot.view.screens.delegate.editPlace.DetailBgMid
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/title_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="1dp"
+                            android:text="@string/edit_place_title_address"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/edit_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="63dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="30dp"
+                            android:background="@drawable/bg_selector_blue"
+                            android:ems="10"
+                            android:hint="@string/edit_place_hint_address"
+                            android:inputType="text"
+                            android:padding="16dp"
+                            android:textSize="22sp" />
+
+                    </LinearLayout>
+                </irongate.checkpot.view.screens.delegate.editPlace.DetailBgMid>
+
+                <com.mapbox.mapboxsdk.maps.MapView
+                    android:id="@+id/place_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    mapbox:mapbox_cameraTargetLat="55.7504694"
+                    mapbox:mapbox_cameraTargetLng="37.6091848"
+                    mapbox:mapbox_cameraZoom="10"
+                    mapbox:mapbox_styleUrl="mapbox://styles/checkpot/cjm24bmto8p3s2snxxxz2v5x3" />
+
+                <irongate.checkpot.view.screens.delegate.editPlace.DetailBgBot
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/title_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="35dp"
+                            android:text="@string/edit_place_title_desc"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="18sp"
+                            android:visibility="gone"
+                            />
+
+                        <EditText
+                            android:id="@+id/edit_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="190dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@drawable/bg_selector_blue"
+                            android:ems="10"
+                            android:gravity="top"
+                            android:hint="@string/edit_place_hint_desc"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:padding="16dp"
+                            android:textSize="22sp"
+                            android:maxLength="60"
+                            android:visibility="gone"/>
+
+                        <Button
+                            android:id="@+id/btn_save"
+                            android:layout_width="match_parent"
+                            android:layout_height="63dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="70dp"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginBottom="60dp"
+                            android:background="@drawable/bg_btn_blue_36"
+                            android:text="@string/edit_place_btn_save"
+                            android:textColor="@android:color/white"
+                            android:textSize="22sp" />
+
+                        <Button
+                            android:id="@+id/btn_preview"
+                            android:layout_width="match_parent"
+                            android:layout_height="63dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginBottom="60dp"
+                            android:background="@drawable/bg_btn_dark_blue_36"
+                            android:text="@string/edit_place_btn_preview"
+                            android:textColor="@android:color/white"
+                            android:textSize="22sp"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+                </irongate.checkpot.view.screens.delegate.editPlace.DetailBgBot>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

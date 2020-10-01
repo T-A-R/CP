@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cont_delegate1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/iceBlue">
+
+
+    <TextView
+        android:id="@+id/txt_delegate1_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="300dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center_vertical"
+        android:text="@string/delegate1_title"
+        android:textColor="@android:color/black"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/txt_delegate1_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="300dp"
+        android:text="@string/delegate1_desc"
+        android:textColor="@android:color/black"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/btn_delegate1"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="59dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/bg_btn_blue_36"
+        android:text="@string/delegate1_btn"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:visibility="visible" />
+
+</RelativeLayout>

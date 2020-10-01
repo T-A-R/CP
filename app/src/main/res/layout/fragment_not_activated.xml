@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="15dp"
+        android:text="@string/not_activated_title"
+        android:textColor="@android:color/black"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:text="@string/not_activated_description"
+        android:textColor="@android:color/black"
+        android:textSize="22sp" />
+
+    <ImageView
+        android:id="@+id/circle_mail"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="300dp"
+        app:srcCompat="@drawable/bg_circle_blue" />
+
+    <ImageView
+        android:id="@+id/circle_teleg"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/bg_circle_blue"
+        android:layout_below="@+id/circle_mail"/>
+
+    <ImageView
+        android:id="@+id/ico_mail"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_below="@+id/circle_mail"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="-32dp"
+        app:srcCompat="@drawable/ico_cant_mail"/>
+
+    <ImageView
+        android:id="@+id/ico_teleg"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_below="@+id/circle_teleg"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="-32dp"
+        app:srcCompat="@drawable/ico_cant_teleg"/>
+
+    <TextView
+        android:id="@+id/txt_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/circle_mail"
+        android:layout_marginLeft="79dp"
+        android:layout_marginTop="-46dp"
+        android:text="@string/support_mail"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_20ssp"
+        />
+
+    <TextView
+        android:id="@+id/txt_teleg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/circle_teleg"
+        android:layout_marginLeft="79dp"
+        android:layout_marginTop="-46dp"
+        android:text="@string/register_cant_telegram"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_20ssp"/>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/bg_btn_blue_36"
+        android:text="@string/btn_account"
+        android:textColor="@android:color/white"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/txt_again"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:text="@string/not_activated_again"
+        android:textColor="@color/blue"
+        android:textSize="22sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/qr_code"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_below="@+id/description"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/qr_code"
+        android:visibility="gone"/>
+
+</RelativeLayout>

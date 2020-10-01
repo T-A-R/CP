@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="raffles">
+        <item quantity="one">%d розыгрыш</item>
+        <item quantity="few">%d розыгрыша</item>
+        <item quantity="many">%d розыгрышей</item>
+        <item quantity="other">%d розыгрышей</item>
+    </plurals>
+</resources>

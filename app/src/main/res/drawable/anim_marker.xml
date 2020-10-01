@@ -1,0 +1,35 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@drawable/anim_marker1" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker2" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker3" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker4" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker5" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker6" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker7" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker8" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker9" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker10" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker11" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker12" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker13" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker14" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker15" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker16" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker17" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker18" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker19" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker20" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker21" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker22" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker23" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker24" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker25" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker26" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker27" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker28" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker29" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker30" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker31" android:duration="40"/>
+    <item android:drawable="@drawable/anim_marker32" android:duration="5040"/>
+</animation-list>

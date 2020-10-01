@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginBottom="80dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_blockOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <irongate.checkpot.view.screens.player.event.DetailBgTop
+            android:layout_width="match_parent"
+            android:layout_height="215dp">
+
+            <ImageView
+                android:id="@+id/view_tariff"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/ic_tariff"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp" />
+
+            <TextView
+                android:id="@+id/tariff_package"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ic_tariff"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="@string/tariff_package"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tariff_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tariff_package"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:textSize="32sp" />
+
+
+        </irongate.checkpot.view.screens.player.event.DetailBgTop>
+
+
+    </RelativeLayout>
+
+
+    <irongate.checkpot.view.screens.player.event.DetailBgBot
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        android:layout_below="@+id/rl_blockOne"
+        android:paddingLeft="22dp"
+        android:paddingTop="22dp"
+        android:paddingRight="22dp">
+
+
+        <TextView
+            android:id="@+id/tariff_description"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:layout_below="@+id/tariff_name"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:id="@+id/ic_raffle"
+            android:layout_width="19dp"
+            android:layout_height="21dp"
+            android:layout_below="@id/tariff_description"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_present_gray" />
+
+        <ImageView
+            android:id="@+id/ic_count_raffles"
+            android:layout_width="19dp"
+            android:layout_height="21dp"
+            android:layout_below="@+id/ic_raffle"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/ic_copy_gray" />
+
+        <ImageView
+            android:id="@+id/ic_message"
+            android:layout_width="19dp"
+            android:layout_height="21dp"
+            android:layout_below="@+id/ic_count_raffles"
+            android:layout_marginTop="45dp"
+            android:src="@drawable/ic_mail_gray" />
+
+
+        <ImageView
+            android:id="@+id/ic_map"
+            android:layout_width="19dp"
+            android:layout_height="21dp"
+            android:layout_below="@+id/ic_message"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/ico_marker"
+            android:tint="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/tv_tariff_count_raffles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tariff_description"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/ic_raffle"
+            android:textColor="@android:color/black"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/tv_tariff_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_tariff_count_raffles"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="27dp"
+            android:layout_toRightOf="@+id/ic_count_raffles"
+            android:textColor="@android:color/black"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/tv_tariff_support"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_tariff_settings"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="17dp"
+            android:layout_toRightOf="@+id/ic_message"
+            android:textColor="@android:color/black"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/tv_map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_tariff_support"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/ic_message"
+            android:text="@string/tariff_map_marked"
+            android:textColor="@android:color/black"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/tariff_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="480dp"
+            android:layout_marginBottom="110dp"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="32sp" />
+
+
+        <Button
+            android:id="@+id/btn_tariff_support"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="19dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/bg_btn_blue_36"
+            android:text="@string/tariff_btn_activate"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="22dp" />
+    </irongate.checkpot.view.screens.player.event.DetailBgBot>
+
+
+</RelativeLayout>

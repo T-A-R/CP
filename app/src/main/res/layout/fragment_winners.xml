@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/iceBlue"
+    android:id="@+id/cont">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/iceBlue"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+
+        <TextView
+            android:id="@+id/title"
+            fontPath="futura_pt_medium.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/winners_title"
+            android:textColor="@android:color/black"
+            android:textSize="40sp"
+            tools:ignore="MissingPrefix" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp">
+
+            <Button
+                android:id="@+id/subtitle_not_prized"
+                fontPath="futura_pt_book.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/transparent"
+                android:text="@string/winners_not_received"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="22dp"
+                tools:ignore="MissingPrefix" />
+
+            <Button
+                android:id="@+id/subtitle_prized"
+                fontPath="futura_pt_book.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/transparent"
+                android:text="@string/winners_received"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="22dp"
+                tools:ignore="MissingPrefix" />
+
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/et_id"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/bg_frame_blue_8_input"
+            android:hint="@string/id_hint"
+            android:paddingLeft="20dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_winners"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="65dp"
+            android:orientation="vertical"
+            android:paddingTop="7dp"
+            android:visibility="visible">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/side_btn"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="-10dp"
+        android:layout_marginLeft="-10dp"
+        android:background="@drawable/btn_side"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/btn_arrow"
+        android:layout_width="@dimen/_16sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="-3dp"
+        android:layout_marginLeft="-3dp"
+        android:background="@drawable/side_arrow"
+        android:visibility="gone"/>
+
+</RelativeLayout>
+

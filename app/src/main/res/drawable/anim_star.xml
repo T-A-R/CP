@@ -1,0 +1,29 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+    <item android:drawable="@drawable/anim_star1" android:duration="60"/>
+    <item android:drawable="@drawable/anim_star2" android:duration="60"/>
+    <item android:drawable="@drawable/anim_star3" android:duration="60"/>
+    <item android:drawable="@drawable/anim_star4" android:duration="60"/>
+    <item android:drawable="@drawable/anim_star5" android:duration="60"/>
+    <item android:drawable="@drawable/anim_star6" android:duration="60"/>
+    <item android:drawable="@drawable/anim_star7" android:duration="60"/>
+    <item android:drawable="@drawable/anim_star8" android:duration="60"/>
+    <item android:drawable="@drawable/anim_star9" android:duration="60"/>
+    <item android:drawable="@drawable/anim_star10" android:duration="60"/>
+    <item android:drawable="@drawable/anim_star11" android:duration="60"/>
+    <item android:drawable="@drawable/anim_star12" android:duration="60"/>
+    <item android:drawable="@drawable/anim_star13" android:duration="60"/>
+    <item android:drawable="@drawable/anim_star14" android:duration="60"/>
+    <item android:drawable="@drawable/anim_star15" android:duration="60"/>
+    <item android:drawable="@drawable/anim_star16" android:duration="60"/>
+    <item android:drawable="@drawable/anim_star17" android:duration="60"/>
+    <item android:drawable="@drawable/anim_star18" android:duration="60"/>
+    <item android:drawable="@drawable/anim_star19" android:duration="60"/>
+    <item android:drawable="@drawable/anim_star20" android:duration="60"/>
+    <item android:drawable="@drawable/anim_star21" android:duration="60"/>
+    <item android:drawable="@drawable/anim_star22" android:duration="60"/>
+    <item android:drawable="@drawable/anim_star23" android:duration="60"/>
+    <item android:drawable="@drawable/anim_star24" android:duration="60"/>
+    <item android:drawable="@drawable/anim_star25" android:duration="60"/>
+    <item android:drawable="@drawable/anim_star26" android:duration="60"/>
+</animation-list>

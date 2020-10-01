@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cont_raffle_card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginBottom="20dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:cardCornerRadius="12dp"
+        android:layout_alignParentLeft="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/image_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                app:cardCornerRadius="12dp"
+                android:layout_alignParentLeft="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/bg_solid"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_140sdp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/bg_black_15"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/bg_raffle_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_140sdp"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone"/>
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/slideViewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_140sdp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true">
+
+                    </android.support.v4.view.ViewPager>
+
+                    <ImageView
+                        android:id="@+id/img_raffle_card_rest"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="18dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/home" />
+
+                    <TextView
+                        android:id="@+id/txt_min_receipt"
+                        fontPath="futura_pt_book.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@drawable/bg_btn_yellow_36"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="13dp"
+                        android:paddingRight="13dp"
+                        android:text="от 1000 руб"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        tools:ignore="MissingPrefix" />
+
+                    <LinearLayout
+                        android:id="@+id/dotsLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_alignBottom="@id/slideViewPager"
+                        android:layout_marginLeft="36dp"
+                        android:layout_marginRight="36dp"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/txt_raffle_card_rest_name"
+                fontPath="futura_pt_book.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/image_card"
+                android:gravity="bottom"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_13ssp"
+                tools:ignore="MissingPrefix" />
+
+            <LinearLayout
+                android:id="@+id/transitionsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_raffle_card_rest_name">
+
+                <TextView
+                    android:id="@+id/txt_raffle_card_prize_name"
+                    fontPath="futura_pt_medium.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_75sdp"
+
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginRight="23dp"
+                    android:gravity="center_vertical"
+                    android:text="TEST"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_25ssp"
+                    tools:ignore="MissingPrefix" />
+            </LinearLayout>
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/linear_params"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="25dp"
+                android:gravity="center_vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/layout_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ico_raffle_card_time"
+                        android:layout_width="14dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/stopwatch_green" />
+
+                    <TextView
+                        android:id="@+id/txt_raffle_card_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_prize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ico_raffle_card_present"
+                        android:layout_width="16dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/present_blue" />
+
+                    <TextView
+                        android:id="@+id/txt_raffle_card_present"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ico_raffle_card_members"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/members_yellow" />
+
+                    <TextView
+                        android:id="@+id/txt_raffle_card_members"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/cont_banned"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="35dp"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="110dp"
+                    app:srcCompat="@drawable/ico_draft" />
+
+                <TextView
+                    fontPath="futura_pt_book.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/draft"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="22sp"
+                    tools:ignore="MissingPrefix" />
+
+                <Button
+                    android:id="@+id/btn_edit"
+                    fontPath="futura_pt_book.ttf"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_38sdp"
+                    android:background="@drawable/bg_btn_yellow_22"
+                    android:text="@string/edit"
+                    android:textSize="@dimen/_11ssp"
+                    android:visibility="gone"
+                    tools:ignore="MissingPrefix"
+                    android:textAllCaps="false"/>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_raffle_card_pick"
+                fontPath="futura_pt_book.ttf"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_17sdp"
+                android:background="@drawable/bg_btn_yellow_22"
+                android:text="@string/raffles_card_btn_pick"
+                android:textSize="@dimen/_11ssp"
+                android:visibility="gone"
+                tools:ignore="MissingPrefix" />
+
+            <LinearLayout
+                android:id="@+id/cont_finished"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="@dimen/_17sdp"
+                android:orientation="vertical"
+                android:layout_alignParentRight="true"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btn_result"
+                    fontPath="futura_pt_book.ttf"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_38sdp"
+                    android:layout_marginRight="@dimen/_14sdp"
+                    android:background="@drawable/bg_btn_blue_22"
+                    android:text="@string/result"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_11ssp"
+                    android:visibility="visible"
+                    tools:ignore="MissingPrefix"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/txt_not_picked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:text="@string/raffles_card_btn_not_picked"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_14ssp"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview_gar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_160sdp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:cardCornerRadius="@dimen/_12sdp"
+        android:layout_alignParentLeft="true"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:id="@+id/img_gar"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_marginLeft="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/home" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/_44sdp"
+                android:layout_height="@dimen/_44sdp"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_14sdp">
+
+                <ImageView
+                    android:id="@+id/img_raffle_card_rest_back"
+                    android:layout_width="@dimen/_44sdp"
+                    android:layout_height="@dimen/_44sdp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/circle_white" />
+
+                <ImageView
+                    android:id="@+id/img_raffle_card_rest_gar"
+                    android:layout_width="@dimen/_38sdp"
+                    android:layout_height="@dimen/_38sdp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/home" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_raffle_card_prize_name_gar"
+                fontPath="futura_pt_medium.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_toEndOf="@+id/img_gar"
+                android:layout_toRightOf="@+id/img_gar"
+                android:gravity="center_vertical"
+                android:text="TEST"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_25ssp"
+                tools:ignore="MissingPrefix" />
+
+            <RelativeLayout
+                android:id="@+id/cont_finished_gar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/_25sdp"
+                android:layout_marginRight="@dimen/_25sdp"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/clock_gray_gar"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_17sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_65sdp"
+                    app:srcCompat="@drawable/stopwatch_gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/clock_gray_gar"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/finished"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/_14ssp" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_raffle_card_pick_gar"
+                fontPath="futura_pt_book.ttf"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_17sdp"
+                android:background="@drawable/bg_btn_yellow_22"
+                android:text="@string/raffles_card_btn_pick"
+                android:textSize="@dimen/_11ssp"
+                tools:ignore="MissingPrefix"
+                />
+
+            <TextView
+                android:id="@+id/txt_not_picked_gar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:text="@string/raffles_card_btn_not_picked"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_14ssp"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

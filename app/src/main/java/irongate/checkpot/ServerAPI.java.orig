@@ -1,0 +1,289 @@
+package irongate.checkpot;
+
+import android.graphics.Bitmap;
+import android.util.Base64;
+import android.util.Log;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.ByteArrayOutputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+@SuppressWarnings("WeakerAccess")
+public class ServerAPI {
+    static private final String API_URL = "https://dev-api.checkpot.fun/";
+
+    static private String nexmoRequestId;
+    static private String token;// = "4566b37c9bd978b2340d6628a8b53c70996ba8c4c2cefa68488c1c8fa66375e0";   // TODO: 22.08.2018
+
+    static public void setToken(String token) {
+        ServerAPI.token = token;
+    }
+
+    static public String getToken() {
+        return token;
+    }
+
+    static public void getSmsWithCode(String phone, final GetSmsWithCodeListener listener) {
+        JSONObject object = new JSONObject();
+        try {
+            object.put("phone", phone);
+        } catch (JSONException e) {
+            Log.d("IRON", "ServerAPI.getSmsWithCode() " + e);
+        }
+
+        Requests.postRequest(API_URL + "auth/touch", object, new Requests.GetRequestListener() {
+            @Override
+            public void onResponse(String response) {
+                // {"nexmo_request_id":"4139df6fbc294d01a2b117bd49f9f999","status":200}
+                // {"status":0,"nexmo_request_id":"ec140c39f61e4bae8c6f584c515b2aee","created":1532533539,"expiredAt":1532533839,"expiredIn":276}
+                Log.d("IRON", "ServerAPI.getSmsWithCode: " + response);
+                int expiredIn = 0;
+                try {
+                    JSONObject o = new JSONObject(response);
+                    int status = o.getInt("status");
+                    if (status == 200)
+                        nexmoRequestId = o.getString("nexmo_request_id");
+                    else
+                        expiredIn = o.getInt("expiredIn");
+                } catch (JSONException e) {
+                    listener.onGetSmsWithCode(false, 0);
+                    Log.d("IRON", "ServerAPI.getSmsWithCode() " + e);
+                    return;
+                }
+                listener.onGetSmsWithCode(true, expiredIn);
+            }
+            @Override
+            public void onException(Exception ex, int status, String message) {
+                listener.onGetSmsWithCode(false, 0);
+                Log.d("IRON", "ServerAPI.getSmsWithCode() " + ex);
+            }
+        });
+    }
+
+    public interface GetSmsWithCodeListener {
+        void onGetSmsWithCode(boolean ok, int expiredIn);
+    }
+
+    static public void submitSmsCode(String code, final SubmitSmsCodeListener listener) {
+        JSONObject object = new JSONObject();
+        try {
+            object.put("code", code);
+            object.put("nexmo_request_id", nexmoRequestId);
+        } catch (JSONException e) {
+            Log.d("IRON", "ServerAPI.submitSmsCode() " + e);
+        }
+        Requests.postRequest(API_URL + "auth/submit", object, new Requests.GetRequestListener() {
+            @Override
+            public void onResponse(String response) {
+                // {"token": "cc5f9a8a4738b1242c550b85be0f97d46b31c33c6b1b9912b5cb6547c8fc1f43"}
+                token = null;
+                try {
+                    Log.d("IRON", "ServerAPI.submitSmsCode() " + response);
+                    JSONObject o = new JSONObject(response);
+                    token = o.getString("token");
+                } catch (JSONException e) {
+                    Log.d("IRON", "ServerAPI.submitSmsCode() " + e);
+                    return;
+                }
+                listener.onSubmitSmsCode(token != null, false);
+            }
+            @Override
+            public void onException(Exception ex, int status, String message) {
+                Log.d("IRON", "ServerAPI.onException() " + status);
+                listener.onSubmitSmsCode(false, status == 418); // Код не подходит
+                Log.d("IRON", "ServerAPI.getSmsWithCode() " + ex);
+            }
+        });
+    }
+
+    public interface  SubmitSmsCodeListener {
+        void onSubmitSmsCode(boolean ok, boolean wrong);
+    }
+
+    static public void getCurrentUser(final GetCurrentUserListener listener) {
+        Requests.getRequest(API_URL + "user", new Requests.GetRequestListener() {
+            @Override
+            public void onResponse(String response) {
+                listener.onGetCurrentUser(response);
+            }
+            @Override
+            public void onException(Exception ex, int status, String message) {
+                listener.onGetCurrentUser(null);
+            }
+        }, getHeaders());
+    }
+
+    public interface  GetCurrentUserListener {
+        void onGetCurrentUser(String data);
+    }
+
+    static public void createRestaurant(String bankAccountNo,
+                                        String bic,
+                                        String email,
+                                        String innkpp,
+                                        String legalAddress,
+                                        String legalManager,
+                                        String legalName,
+                                        String ogrn,
+                                        String type,
+                                        Bitmap sign,
+                                        final CreateRestaurantListener listener) {
+        JSONObject object = new JSONObject();
+        try {
+            object.put("bankAccountNo", bankAccountNo);
+            object.put("bic", bic);
+            object.put("email", email);
+            object.put("innkpp", innkpp);
+            object.put("legalAddress", legalAddress);
+            object.put("legalManager", legalManager);
+            object.put("legalName", legalName);
+            object.put("ogrn", ogrn);
+            object.put("type", type);
+            JSONArray docs = new JSONArray();
+            docs.put(getBase64(sign));
+            object.put("documents", docs);
+        } catch (JSONException e) {
+            Log.d("IRON", "ServerAPI.createRestaurant() " + e);
+        }
+        Log.d("IRON", "ServerAPI.createRestaurant() " + object.toString());
+        Requests.postRequest(API_URL + "restaurant", object, new Requests.GetRequestListener() {
+            @Override
+            public void onResponse(String response) {
+                // {"isActive":false,"uuid":"uzFpuvmaNQ","createdAt":"2018-08-23T18:19:46.210Z","updatedAt":"2018-08-23T18:19:46.222Z"}
+                Log.d("IRON", "ServerAPI.createRestaurant() " + response);
+                String uuid;
+                try {
+                    JSONObject o = new JSONObject(response);
+                    uuid = o.getString("uuid");
+                } catch (JSONException e) {
+                    Log.d("IRON", "ServerAPI.createRestaurant() " + e);
+                    return;
+                }
+                listener.onCreateRestaurant(uuid);
+            }
+            @Override
+            public void onException(Exception ex, int status, String message) {
+                listener.onCreateRestaurant(null);
+                Log.d("IRON", "ServerAPI.createRestaurant() " + ex);
+            }
+        }, getHeaders(), true);
+    }
+
+    public interface  CreateRestaurantListener {
+        void onCreateRestaurant(String uuid);
+    }
+
+    static public void createRestaurantPlace(String uuid, String address, String description, Bitmap logo, ArrayList<Bitmap> photos, final CreateRestaurantPlaceListener listener) {
+        JSONObject object = new JSONObject();
+        try {
+            object.put("address", address);
+            object.put("description", description);
+            JSONArray arrCoords = new JSONArray();
+            arrCoords.put(0);
+            arrCoords.put(0);
+            object.put("coordinates", arrCoords);
+            JSONArray arrPhotos = new JSONArray();
+            arrPhotos.put(getBase64(logo));
+            for (int i = 0; i < photos.size(); i++) {
+                arrPhotos.put(getBase64(photos.get(i)));
+            }
+            object.put("photos", arrPhotos);
+        } catch (JSONException e) {
+            Log.d("IRON", "ServerAPI.createRestaurantPlace() " + e);
+        }
+//        FileUtils.saveToFile(object.toString(), "createRestaurantPlace.post");    // Тестим тут серверную часть
+        Requests.postRequest(API_URL + "place/" + uuid, object, new Requests.GetRequestListener() {
+            @Override
+            public void onResponse(String response) {
+                // {"location":{"coordinates":[0,0]},"photos":["PHOTO"],"events":[],"address":"со","description":"ад","restaurant":{"uuid":"w6QPttixPe"},"uuid":"caqvidKIBN","createdAt":"2018-08-25T21:00:32.359Z","updatedAt":"2018-08-25T21:00:32.359Z"}
+                Log.d("IRON", "ServerAPI.createRestaurantPlace() " + response);
+                String uuid;
+                try {
+                    JSONObject o = new JSONObject(response);
+                    uuid = o.getString("uuid");
+                } catch (JSONException e) {
+                    Log.d("IRON", "ServerAPI.createRestaurantPlace() " + e);
+                    return;
+                }
+                listener.onCreateRestaurantPlace(uuid);
+            }
+            @Override
+            public void onException(Exception ex, int status, String message) {
+                listener.onCreateRestaurantPlace(null);
+                Log.d("IRON", "ServerAPI.createRestaurantPlace() " + ex);
+            }
+        }, getHeaders(), true);
+    }
+
+    public interface CreateRestaurantPlaceListener {
+        void onCreateRestaurantPlace(String uuid);
+    }
+
+    static public void getPlaceByUuid(String uuid, final GetPlaceByUuidListener listener) {
+        Requests.getRequest(API_URL + "place/" + uuid, new Requests.GetRequestListener() {
+            @Override
+            public void onResponse(String response) {
+
+                Log.d("IRON", "ServerAPI.getPlaceByUuid() " + response);
+////                String uuid;
+////                try {
+////                    JSONObject o = new JSONObject(response);
+////                    uuid = o.getString("uuid");
+////                } catch (JSONException e) {
+////                    Log.d("IRON", "ServerAPI.getPlaceByUuid() " + e);
+////                    return;
+////                }
+                listener.onGetPlaceByUuid(false);
+            }
+            @Override
+            public void onException(Exception ex, int status, String message) {
+                listener.onGetPlaceByUuid(false);
+                Log.d("IRON", "ServerAPI.getPlaceByUuid() " + ex);
+            }
+        }, getHeaders());
+    }
+
+    public interface GetPlaceByUuidListener {
+        void onGetPlaceByUuid(boolean ok);
+    }
+
+<<<<<<< working copy
+    static public void getPlacesListViaGeo(final GetPlacesListViaGeo listener) {
+        Requests.getRequest(API_URL + "place/56.940729/60.920992/40000", new Requests.GetRequestListener() {
+=======
+    static public void getPlacesListViaGeo(double lat, double lng, final GetPlacesListViaGeoListener listener) {
+        Requests.getRequest(API_URL + "place/" + lat + "/" + lng + "/40000", new Requests.GetRequestListener() {
+>>>>>>> destination
+            @Override
+            public void onResponse(String response) {
+                listener.onGetPlacesListViaGeo(response);
+            }
+            @Override
+            public void onException(Exception ex, int status, String message) {
+                listener.onGetPlacesListViaGeo(null);
+            }
+        }, getHeaders());
+    }
+
+    public interface GetPlacesListViaGeoListener {
+        void onGetPlacesListViaGeo(String data);
+    }
+
+    static private Map<String, String> getHeaders() {
+        HashMap<String, String> map = new HashMap<>();
+        map.put("Authorization", token);
+        return map;
+    }
+
+    static public String getBase64(Bitmap bitmap) {
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
+        byte[] byteArray = byteArrayOutputStream .toByteArray();
+        return Base64.encodeToString(byteArray, Base64.DEFAULT);
+    }
+}

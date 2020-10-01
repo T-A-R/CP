@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cont"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+    <irongate.checkpot.view.PageIndicator
+        android:id="@+id/indicator"
+        android:layout_width="55dp"
+        android:layout_height="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp">
+
+    </irongate.checkpot.view.PageIndicator>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:layout_weight="1"
+        android:text="|"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="22sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/txt_skip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="18dp"
+                android:gravity="center"
+                android:text="@string/tutorial_skip"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="22sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/txt_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:gravity="center"
+                android:text="@string/tutorial_next"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="22sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

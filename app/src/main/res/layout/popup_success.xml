@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_30sdp">
+
+    <ImageView
+        android:id="@+id/img_shape"
+        android:layout_width="@dimen/_345sdp"
+        android:layout_height="@dimen/_350sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:layout_marginLeft="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_46sdp"
+        android:src="@drawable/combined_shape_big" />
+
+    <TextView
+        android:id="@+id/title_pop"
+        fontPath="futura_pt_meduim.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="@dimen/_100sdp"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
+        tools:ignore="MissingPrefix" />
+
+    <TextView
+        android:id="@+id/description"
+        fontPath="futura_pt_book.ttf"
+        android:layout_width="@dimen/_245sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/title_pop"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/description_reg_final"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_17ssp"
+        tools:ignore="MissingConstraints,MissingPrefix"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/description_bold"
+        fontPath="futura_pt_book.ttf"
+        android:layout_width="@dimen/_245sdp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/description"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="@string/description_reg_final2"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints,MissingPrefix"
+        android:visibility="visible"/>
+
+    <Button
+        android:id="@+id/btn_profile"
+        fontPath="futura_pt_book.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:background="@drawable/bg_btn_blue_36"
+        android:text="@string/delegate2_link_btn"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:layout_below="@+id/description_bold"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        android:enabled="true"
+        tools:ignore="MissingConstraints,MissingPrefix" />
+
+    <ImageView
+        android:id="@+id/img_animal"
+        android:layout_below="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_170sdp"
+        android:layout_marginEnd="@dimen/_28sdp"
+        android:layout_marginRight="@dimen/_28sdp"
+        android:src="@drawable/animal_checkpot"
+        android:layout_alignParentRight="true"
+        tools:ignore="MissingConstraints"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/img_animal_done"
+        android:layout_below="@+id/btn_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginEnd="@dimen/_28sdp"
+        android:src="@drawable/animal_checkpot2"
+        android:layout_alignParentRight="true"
+        tools:ignore="MissingConstraints"
+        />
+
+
+
+</RelativeLayout>

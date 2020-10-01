@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cont"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/iceBlue">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="350dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:text="@string/delegate2_title"
+        android:textColor="@android:color/black"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="230dp"
+        android:text="@string/delegate2_desc"
+        android:textColor="@android:color/black"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="132dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/bg_btn_blue_36"
+        android:text="@string/delegate2_btn"
+        android:textColor="@android:color/white"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/txt_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center"
+        android:text="@string/delegate2_link"
+        android:textColor="@color/blue"
+        android:textSize="22sp" />
+
+    <RelativeLayout
+        android:id="@+id/cont_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

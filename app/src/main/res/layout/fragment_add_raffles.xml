@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/iceBlue"
+    android:focusableInTouchMode="true"
+    android:padding="8dp"
+    android:theme="@style/BlueTheme"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarStyle="outsideOverlay"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginBottom="30dp"
+                android:text="@string/add_raffles_title"
+                android:textColor="@android:color/black"
+                android:textSize="40sp" />
+
+            <RelativeLayout
+                android:id="@+id/cont_panel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/title">
+
+
+                <RelativeLayout
+                    android:id="@+id/relative_add_raffles"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <irongate.checkpot.view.screens.player.event.DetailBgTop
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/txt_settings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginTop="32dp"
+                            android:layout_marginBottom="30dp"
+                            android:text="@string/add_raffles_settings"
+                            android:textSize="18sp" />
+
+                        <Switch
+                            android:id="@+id/switch_settings"
+                            android:layout_width="40dp"
+                            android:layout_height="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@+id/txt_settings" />
+
+                    </irongate.checkpot.view.screens.player.event.DetailBgTop>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative_diff_prizes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relative_add_raffles"
+                    android:visibility="gone">
+
+                    <irongate.checkpot.view.screens.player.event.DetailBgMid
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/txt_diff_prize"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginTop="32dp"
+                            android:layout_marginBottom="30dp"
+                            android:text="@string/different_prize"
+                            android:textSize="18sp" />
+
+                        <Switch
+                            android:id="@+id/switch_prizes"
+                            android:layout_width="40dp"
+                            android:layout_height="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@+id/txt_diff_prize" />
+
+                    </irongate.checkpot.view.screens.player.event.DetailBgMid>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/load_prize_extended"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relative_diff_prizes"
+                    android:orientation="vertical">
+
+                    <irongate.checkpot.view.screens.player.event.DetailBgMid
+                        android:id="@+id/cont_num_prize"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txt_num_prize"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="22dp"
+                            android:layout_marginTop="35dp"
+                            android:text="@string/amt_winners"
+                            android:textSize="18sp"
+                            android:visibility="gone" />
+
+                        <EditText
+                            android:id="@+id/edit_num_prizes"
+                            android:layout_width="match_parent"
+                            android:layout_height="63dp"
+                            android:layout_below="@+id/txt_num_prize"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="18dp"
+                            android:background="@drawable/bg_selector_blue"
+                            android:ems="10"
+                            android:hint="@string/amt_winners_hint"
+                            android:inputType="number"
+                            android:padding="19dp"
+                            android:textSize="22sp"
+                            android:visibility="gone" />
+
+                    </irongate.checkpot.view.screens.player.event.DetailBgMid>
+
+                    <irongate.checkpot.view.screens.delegate.addedRaffle.PrizeEditView
+                        android:id="@+id/prize_edit_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cont_num_prize"
+                        android:visibility="visible">
+
+                    </irongate.checkpot.view.screens.delegate.addedRaffle.PrizeEditView>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_prize_edit"
+                        android:layout_below="@+id/prize_edit_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:stackFromBottom="true"
+                        android:visibility="gone">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative_type_raffle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/load_prize_extended"
+                    android:visibility="gone">
+
+                    <irongate.checkpot.view.screens.player.event.DetailBgMid
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="35dp">
+
+                        <TextView
+                            android:id="@+id/txt_type_raffles"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="22dp"
+                            android:layout_marginTop="35dp"
+                            android:text="@string/type_raffles"
+                            android:textSize="18sp" />
+
+                        <RadioGroup
+                            android:id="@+id/radio_group"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txt_type_raffles"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginTop="13dp">
+
+                            <RadioButton
+                                android:id="@+id/radio_btn_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="9dp"
+                                android:checked="true"
+                                android:text="@string/btn_to_time"
+                                android:textSize="22sp" />
+
+                            <RadioButton
+                                android:id="@+id/radio_btn_amt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="9dp"
+                                android:text="@string/btn_to_amt"
+                                android:textSize="22sp" />
+
+                            <RadioButton
+                                android:id="@+id/radio_btn_time_and_amt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="9dp"
+                                android:text="@string/btn_to_time_and_amt"
+                                android:textSize="22sp"
+                                android:visibility="gone" />
+                        </RadioGroup>
+
+                        <LinearLayout
+                            android:id="@+id/time_group"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/radio_group"
+                            android:layout_marginTop="25dp"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/edit_begin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_marginLeft="19dp"
+                                android:background="@drawable/bg_selector_blue"
+                                android:ems="10"
+                                android:hint="@string/begin_hint"
+                                android:inputType="text"
+                                android:textAlignment="center"
+                                android:textSize="@dimen/_16ssp"
+                                android:layout_weight="1"
+                                android:visibility="visible" />
+
+                            <EditText
+                                android:id="@+id/edit_finish"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_selector_blue"
+                                android:ems="10"
+                                android:textAlignment="center"
+                                android:hint="@string/finish_hint"
+                                android:inputType="text"
+                                android:textSize="@dimen/_16ssp"
+                                android:visibility="visible" />
+
+                        </LinearLayout>
+
+
+
+                        <TextView
+                            android:id="@+id/txt_amt_member"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/time_group"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginTop="30dp"
+                            android:text="@string/amt_member"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            android:visibility="gone" />
+
+
+                        <EditText
+                            android:id="@+id/edit_amt_member"
+                            android:layout_width="match_parent"
+                            android:layout_height="63dp"
+                            android:layout_below="@+id/txt_amt_member"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@drawable/bg_selector_blue"
+                            android:ems="10"
+                            android:hint="@string/amt_member_hint"
+                            android:inputType="number"
+                            android:padding="19dp"
+                            android:textSize="22sp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/txt_amt_winner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/edit_amt_member"
+                            android:layout_marginLeft="22dp"
+                            android:layout_marginTop="35dp"
+                            android:text="@string/amt_winner"
+                            android:textSize="18sp"
+                            android:visibility="gone" />
+
+                    </irongate.checkpot.view.screens.player.event.DetailBgMid>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative_add_raffles3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relative_type_raffle">
+
+                    <irongate.checkpot.view.screens.player.event.DetailBgMid
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txt_min_check"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginTop="30dp"
+                            android:text="@string/min_check"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/edit_min_cheсk"
+                            android:layout_width="match_parent"
+                            android:layout_height="63dp"
+                            android:layout_below="@+id/txt_min_check"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@drawable/bg_selector_blue"
+                            android:ems="10"
+                            android:hint="@string/min_check_hint"
+                            android:inputType="number"
+                            android:padding="19dp"
+                            android:textSize="22sp" />
+
+                        <TextView
+                            android:id="@+id/txt_about_raffles"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/edit_min_cheсk"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginTop="30dp"
+                            android:text="@string/about_raffles"
+                            android:textSize="18sp"
+                            fontPath="futura_pt_book.ttf"
+                            tools:ignore="MissingPrefix"/>
+
+
+                        <EditText
+                            android:id="@+id/edit_about_raffles"
+                            android:layout_width="match_parent"
+                            android:layout_height="191dp"
+                            android:layout_below="@+id/txt_about_raffles"
+                            android:layout_gravity="top"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@drawable/bg_selector_blue"
+                            android:ems="10"
+                            android:gravity="top"
+                            android:hint="@string/about_raffles_hint"
+                            android:padding="19dp"
+                            android:textSize="22sp"
+                            android:inputType="textCapSentences|textMultiLine"
+                            fontPath="futura_pt_book.ttf"
+                            android:maxLength="256"
+                            tools:ignore="MissingPrefix"/>
+
+                        <TextView
+                            android:id="@+id/txt_total_prizes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/edit_about_raffles"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginTop="30dp"
+                            android:text="@string/total_prizes"
+                            android:textSize="18sp" />
+
+
+                        <EditText
+                            android:id="@+id/edit_total_prizes"
+                            android:layout_width="match_parent"
+                            android:layout_height="63dp"
+                            android:layout_below="@+id/txt_total_prizes"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="40dp"
+                            android:background="@drawable/bg_selector_blue"
+                            android:ems="10"
+                            android:hint="@string/total_prizes_hint"
+                            android:inputType="number"
+                            android:padding="19dp"
+                            android:textSize="22sp" />
+
+                    </irongate.checkpot.view.screens.player.event.DetailBgMid>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative_add_raffles4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relative_add_raffles3">
+
+                    <irongate.checkpot.view.screens.player.event.DetailBgMid
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <CheckBox
+                            android:id="@+id/check_guarant"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginTop="28dp"
+                            android:layout_marginBottom="37dp"
+                            android:text="@string/guaranteed_prize"
+                            android:textColor="@color/blue"
+                            android:textSize="22sp" />
+
+                        <TextView
+                            android:id="@+id/guaranteed_prize_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/check_guarant"
+                            android:layout_marginLeft="12dp"
+                            android:text="@string/prize_name"
+                            android:textSize="18sp"
+                            android:visibility="gone" />
+
+                        <EditText
+                            android:id="@+id/edit_guaranteed_prize"
+                            android:layout_width="match_parent"
+                            android:layout_height="63dp"
+                            android:layout_below="@+id/guaranteed_prize_name"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/bg_selector_blue"
+                            android:ems="10"
+                            android:hint="@string/guaranteed_prize_name_hint"
+                            android:maxLength="30"
+                            android:inputType="text"
+                            android:padding="19dp"
+                            android:textSize="22sp"
+                            android:visibility="gone" />
+
+                        <irongate.checkpot.view.screens.delegate.addedRaffle.GarPrizeUploadView
+                            android:id="@+id/guaranteed_prize_load"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/edit_guaranteed_prize"
+                            android:visibility="gone" />
+
+                    </irongate.checkpot.view.screens.player.event.DetailBgMid>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relative_add_raffles4">
+
+                    <irongate.checkpot.view.screens.player.event.DetailBgBot
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/ll_security"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/img_drop"
+                                android:layout_width="15dp"
+                                android:layout_height="5dp"
+                                android:layout_marginLeft="32dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="5dp"
+                                android:visibility="gone"
+                                app:srcCompat="@drawable/ico_dropdown" />
+
+
+                            <ImageView
+                                android:id="@+id/img_up"
+                                android:layout_width="15dp"
+                                android:layout_height="5dp"
+                                android:layout_marginLeft="32dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="5dp"
+                                android:visibility="visible"
+                                app:srcCompat="@drawable/ico_dropup" />
+
+                            <TextView
+                                android:id="@+id/tv_security"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="30dp"
+                                android:background="@android:color/transparent"
+                                android:text="@string/security"
+                                android:textColor="@android:color/black"
+                                android:textSize="22sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_security_description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ll_security"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:text="@string/security_description"
+                            android:textColor="@android:color/black"
+                            android:textSize="22sp"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/btn_publication"
+                            android:layout_width="match_parent"
+                            android:layout_height="63dp"
+                            android:layout_below="@id/tv_security_description"
+                            android:layout_marginLeft="32dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="32dp"
+                            android:layout_marginBottom="100dp"
+                            android:background="@drawable/bg_btn_blue_36"
+                            android:text="@string/add_raffles_step_2"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white"
+                            android:textSize="22sp" />
+
+                        <Button
+                            android:id="@+id/btn_preview"
+                            android:layout_width="match_parent"
+                            android:layout_height="63dp"
+                            android:layout_below="@+id/btn_publication"
+                            android:layout_marginLeft="32dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="32dp"
+                            android:layout_marginBottom="100dp"
+                            android:background="@drawable/bg_btn_blue_36"
+                            android:text="@string/add_raffles_preview"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white"
+                            android:textSize="22sp"/>
+
+                    </irongate.checkpot.view.screens.player.event.DetailBgBot>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

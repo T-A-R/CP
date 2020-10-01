@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/iceBlue"
+    android:scrollbars="none"
+    android:orientation="vertical"
+    android:id="@+id/cont_bik">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/iceBlue"
+    android:padding="@dimen/_15sdp"
+    android:scrollbars="none"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/_42sdp"
+            android:layout_height="@dimen/_42sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/bg_circle_yellow"
+            android:padding="@dimen/_16sdp"
+            android:scaleType="fitCenter"
+            android:tint="@android:color/black"
+            app:srcCompat="@drawable/ico_back" />
+
+
+        <TextView
+            android:id="@+id/tv_bik"
+            fontPath="futura_pt_medium.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/title_bik"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_26ssp"
+            tools:ignore="MissingPrefix" />
+
+        <LinearLayout
+            android:id="@+id/ll_container_bik"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_panel_5"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/edit_bik"
+                fontPath="futura_pt_book.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_56sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_selector_blue"
+                android:ems="10"
+                android:hint="@string/info_hint_bik"
+                android:inputType="number"
+                android:maxLength="9"
+                android:padding="@dimen/_16sdp"
+                android:textSize="@dimen/_18ssp"
+                tools:ignore="MissingPrefix" />
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_54sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/_52sdp"
+                    android:layout_height="match_parent">
+
+
+
+                    <ImageButton
+                        android:id="@+id/btn_check2"
+                        android:layout_width="@dimen/_26sdp"
+                        android:layout_height="@dimen/_26sdp"
+                        android:layout_marginRight="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:background="@drawable/bg_frame_blue_3"
+                        android:padding="@dimen/_3sdp"
+                        android:scaleType="fitCenter"
+                        android:tint="@color/blue" />
+
+                    <ImageButton
+                        android:id="@+id/btn_check"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_marginRight="@dimen/_18sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:background="@android:color/transparent"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_agree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/info_agreement"
+                        android:textColor="@android:color/black"
+                        fontPath="futura_pt_book.ttf"
+                        android:textSize="@dimen/_14ssp"
+                        tools:ignore="MissingPrefix" />
+
+                    <TextView
+                        android:id="@+id/txt_link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/info_link"
+                        android:textColor="@color/blue"
+                        fontPath="futura_pt_book.ttf"
+                        android:textSize="@dimen/_14ssp"
+                        tools:ignore="MissingPrefix" />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_moderation"
+                fontPath="futura_pt_book.ttf"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/popup_view"
+                android:layout_height="@dimen/_48sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/bg_btn_blue_36"
+                android:text="@string/info_btn"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_18ssp"
+                tools:ignore="MissingPrefix" />
+        </LinearLayout>
+
+        <irongate.checkpot.view.screens.delegate.companyRegistration.PopupViewSmall
+            android:id="@+id/popup_view_small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+        </irongate.checkpot.view.screens.delegate.companyRegistration.PopupViewSmall>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/cont_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></RelativeLayout>
+
+</RelativeLayout>
+</RelativeLayout>

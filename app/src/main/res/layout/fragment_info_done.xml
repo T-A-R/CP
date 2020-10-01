@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cont"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.8"
+        android:background="@android:color/black">
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/btn_close"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:background="@drawable/bg_circle_yellow"
+        android:padding="17dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/ico_x" />
+
+    <RelativeLayout
+        android:id="@+id/panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="112dp"
+        android:background="@drawable/bg_panel_10">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="33dp"
+            android:layout_marginRight="33dp"
+            android:layout_marginTop="38dp"
+            android:text="@string/info_done_title"
+            android:textColor="@android:color/black"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="33dp"
+            android:layout_marginRight="33dp"
+            android:layout_marginTop="114dp"
+            android:text="@string/info_done_desc"
+            android:textColor="@android:color/black"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="58dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginRight="34dp"
+            android:background="@drawable/bg_btn_blue_36"
+            android:text="@string/info_done_btn"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

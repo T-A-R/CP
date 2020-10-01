@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blueBg"
+    android:focusableInTouchMode="true">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/bg_default" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/cont_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="710dp">
+
+                </android.support.v4.view.ViewPager>
+
+                <irongate.checkpot.view.PageIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="367dp">
+
+                </irongate.checkpot.view.PageIndicator>
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="406dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:id="@+id/desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="148dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="439dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp" />
+
+            </RelativeLayout>
+
+            <com.mapbox.mapboxsdk.maps.MapView
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="710dp"
+                android:visibility="gone"
+                mapbox:mapbox_cameraTargetLat="55.7504694"
+                mapbox:mapbox_cameraTargetLng="37.6091848"
+                mapbox:mapbox_cameraZoom="10"
+                mapbox:mapbox_styleUrl="mapbox://styles/checkpot/cjm24bmto8p3s2snxxxz2v5x3" />
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="45dp"
+                android:background="@drawable/bg_circle_transblack_30"
+                android:padding="17dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ico_back" />
+
+            <ImageView
+                android:id="@+id/img_logo"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="45dp"
+                app:srcCompat="@drawable/home" />
+
+            <ImageButton
+                android:id="@+id/btn_menu"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="45dp"
+                android:background="@drawable/bg_circle_transblack_30"
+                android:padding="13dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ico_dots" />
+
+            <LinearLayout
+                android:id="@+id/linear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="621dp"
+                android:orientation="vertical">
+
+                <irongate.checkpot.view.screens.player.event.DetailBgTop
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+                    <TextView
+                        android:id="@+id/txt_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="45dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="45dp"
+                        android:gravity="center"
+                        android:text="@string/place_address"
+                        android:textColor="@android:color/black"
+                        android:textSize="22sp" />
+                </irongate.checkpot.view.screens.player.event.DetailBgTop>
+
+                <irongate.checkpot.view.screens.player.event.DetailBgBot
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_num_raffles"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="3"
+                            android:textColor="@android:color/black"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txt_num_members"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="200"
+                            android:textColor="@android:color/black"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/txt_num_done"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="455"
+                            android:textColor="@android:color/black"
+                            android:textSize="25sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="73dp">
+
+                        <TextView
+                            android:id="@+id/title_num_raffles"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/place_num_raffles"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/title_num_members"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/place_num_members"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/title_num_done"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/place_nume_done"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </irongate.checkpot.view.screens.player.event.DetailBgBot>
+
+                <TextView
+                    android:id="@+id/title_raffles"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/place_raffles"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/linear_events"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"></LinearLayout>
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btn_map"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="600dp"
+                android:background="@drawable/bg_circle_green"
+                android:padding="15dp"
+                android:scaleType="fitCenter"
+                android:tint="@android:color/white"
+                app:srcCompat="@drawable/ico_marker" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

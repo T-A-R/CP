@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <EditText
+        android:id="@+id/edit_help"
+        fontPath="futura_pt_book.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="top"
+        android:enabled="true"
+        android:background="@drawable/bg_selector_blue"
+        android:ems="10"
+        android:padding="16dp"
+        android:textSize="22sp"
+        android:inputType="text"
+        android:maxLines="1"
+        tools:ignore="MissingPrefix" />
+
+    <TextView
+        android:id="@+id/txt_help"
+        fontPath="futura_pt_book.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_help"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="23dp"
+        android:textSize="18sp"
+        android:textColor="@color/orange"
+        tools:ignore="MissingPrefix"/>
+
+    <ImageView
+        android:id="@+id/img_paw"
+        android:layout_width="45dp"
+        android:layout_height="65dp"
+        android:layout_below="@+id/edit_help"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="0dp"
+        android:src="@drawable/ic_paw"
+        android:visibility="gone"/>
+
+</RelativeLayout>

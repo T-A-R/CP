@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/iceBlue"
+    android:scrollbars="none"
+    android:padding="@dimen/_15sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/_42sdp"
+            android:layout_height="@dimen/_42sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/bg_circle_yellow"
+            android:padding="@dimen/_16sdp"
+            android:scaleType="fitCenter"
+            android:tint="@android:color/black"
+            app:srcCompat="@drawable/ico_back" />
+
+
+        <TextView
+            android:id="@+id/tv_email_tittle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/email_text"
+            android:textSize="@dimen/_26ssp"
+            android:textColor="@android:color/black"
+            fontPath="futura_pt_medium.ttf"
+            tools:ignore="MissingPrefix" />
+
+        <LinearLayout
+            android:id="@+id/ll_container_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_panel_5">
+
+
+            <EditText
+                android:id="@+id/edit_mail"
+                fontPath="futura_pt_book.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_56sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_selector_blue"
+                android:ems="10"
+                android:hint="@string/delegate2_mail_hint"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/_16sdp"
+                android:textSize="@dimen/_18ssp"
+                android:maxLength="50"
+                tools:ignore="MissingPrefix" />
+
+            <Button
+                android:id="@+id/btn_step_two"
+                fontPath="futura_pt_book.ttf"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/popup_view"
+                android:layout_height="@dimen/_48sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/bg_btn_blue_36"
+                android:text="@string/step_two"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_18ssp"
+                tools:ignore="MissingPrefix" />
+        </LinearLayout>
+
+        <irongate.checkpot.view.screens.delegate.companyRegistration.PopupViewSmall
+            android:id="@+id/popup_view_small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></irongate.checkpot.view.screens.delegate.companyRegistration.PopupViewSmall>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "270213121700",
+    "firebase_url": "https://checkpot-220605.firebaseio.com",
+    "project_id": "checkpot-220605",
+    "storage_bucket": "checkpot-220605.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:270213121700:android:afb80a2e50dd5ef8",
+        "android_client_info": {
+          "package_name": "irongate.checkpot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "270213121700-i4hadquh5qab0hh6nlhtmtsna89v6mkt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDv1Sjk3wQsbstLXWbLNSnPllfzdqUTECU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

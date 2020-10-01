@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cont_winner"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#71D178"
+    android:clipChildren="false"
+    android:focusableInTouchMode="true">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/bg_winner_blot" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitEnd"
+        app:srcCompat="@drawable/bg_winner_blot" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitStart"
+        app:srcCompat="@drawable/bg_flags" />
+
+    <TextView
+        android:id="@+id/txt_winner_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="81dp"
+        android:gravity="center"
+        android:text="@string/winner_title"
+        android:textColor="@android:color/white"
+        android:textSize="40sp" />
+
+    <RelativeLayout
+        android:id="@+id/cont_winner_card"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_winner"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="77dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/bg_btn_yellow_36"
+        android:text="@string/winner_btn_inst"
+        android:textColor="@android:color/black"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/txt_winner_prizes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="34dp"
+        android:text="@string/winner_prizes"
+        android:textColor="@android:color/white"
+        android:textSize="22sp" />
+
+    <RelativeLayout
+        android:id="@+id/cont_winner_confetti"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false">
+
+        <ImageView
+            android:id="@+id/img_winner_balloon_left"
+            android:layout_width="100dp"
+            android:layout_height="180dp"
+            android:layout_marginLeft="-30dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/anim_balloon" />
+
+        <ImageView
+            android:id="@+id/img_winner_balloon_left2"
+            android:layout_width="100dp"
+            android:layout_height="180dp"
+            android:layout_marginLeft="-30dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/anim_balloon" />
+
+        <ImageView
+            android:id="@+id/img_winner_balloon_right"
+            android:layout_width="100dp"
+            android:layout_height="180dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="-30dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/anim_balloon" />
+
+        <ImageView
+            android:id="@+id/img_winner_balloon_right2"
+            android:layout_width="100dp"
+            android:layout_height="180dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="-30dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/anim_balloon" />
+
+    </RelativeLayout>
+</RelativeLayout>

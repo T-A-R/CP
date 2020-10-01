@@ -1,0 +1,572 @@
+<resources>
+    <string name="app_name">Checkpot</string>
+
+    <string name="menu">Меню</string>
+    <string name="profile">Профиль</string>
+    <string name="to_enter">Войти</string>
+    <string name="to_register">Зарегистрироваться</string>
+    <string name="to_complain">Пожаловаться</string>
+    <string name="to_select">Выбрать</string>
+    <string name="submiting">Данные отправляются</string>
+    <string name="submit_ok">Данные успешно отправлены</string>
+    <string name="submit_ok_mail">Письмо отправлено</string>
+    <string name="error_submit">Ошибка отправки данных.\nПопробуйте позже.</string>
+    <string name="error_auth">Не удалось авторизоваться.</string>
+    <string name="error">Произошла ошибка</string>
+    <string name="error_prices">Ошибка соединения. Попробуйте создать розыгрыш еще раз.</string>
+    <string name="check_connection">Проверьте подключение к интернету</string>
+    <string name="need_all_valid">Все поля должны быть корректно заполнены</string>
+    <string name="load_image">Загрузить изображение</string>
+    <string name="perfect">Отлично!</string>
+    <string name="hours">Часы</string>
+    <string name="mins">Минуты</string>
+    <string name="secs">Секунды</string>
+    <string name="camera">Камера</string>
+    <string name="gallery">Галерея</string>
+    <string name="finished">Окончен</string>
+    <string name="result">Результаты</string>
+    <string name="draft">Черновик</string>
+    <string name="edit">Редактировать</string>
+    <string name="for_business">Для бизнеса</string>
+    <string name="no_memory">На устройстве недостаточно памяти</string>
+
+    <string-array name="months">
+        <item>Январь</item>
+        <item>Февраль</item>
+        <item>Март</item>
+        <item>Апрель</item>
+        <item>Май</item>
+        <item>Июнь</item>
+        <item>Июль</item>
+        <item>Август</item>
+        <item>Сентябрь</item>
+        <item>Октябрь</item>
+        <item>Ноябрь</item>
+        <item>Декабрь</item>
+    </string-array>
+
+    <string name="tutorial_title1">Находите\nлюбимые места</string>
+    <string name="tutorial_title2">Участвуйте\nв розыгрышах</string>
+    <string name="tutorial_title3">Побеждайте\nи получайте призы</string>
+    <string name="tutorial_skip">Пропустить</string>
+    <string name="tutorial_next">Продолжить</string>
+    <string name="tutorial_finish">Завершить</string>
+    <string name="tutorial_begin">Начать</string>
+
+    <string name="register_title">Добро пожаловать\nв Checkpot</string>
+    <string name="register_btn_register">Регистрация</string>
+    <string name="register_btn_skip">Перейти к розыгрышам</string>
+
+    <string name="register1_desc">Если у вас возникли проблемы со входом, обратитесь в нашу техподдержку</string>
+    <string name="register1_title_phone">Ваш номер телефона</string>
+    <string name="register1_hint_phone">1234567890</string>
+    <string name="register1_btn_sendsms">Отправить смс с кодом</string>
+    <string name="register1_txt_cant_enter">Не можете войти?</string>
+    <string name="register1_nonumber">Необходимо ввести номер</string>
+    <string name="register1_timer_hint">Доступно через</string>
+    <string name="register1_send_error">Не удалось отправить номер</string>
+    <string name="register1_send_often">Пожалуйста отправьте позже</string>
+
+    <string name="register2_title_code">Код из смс</string>
+    <string name="register2_txt_nosms">Не приходит смс?</string>
+    <string name="register2_txt_wait">Подождите\nВыполняется вход</string>
+    <string name="register2_nocode">Необходимо ввести код</string>
+    <string name="register2_send_error">Не удалось отправить код</string>
+    <string name="register2_wrong_code">Не верный код. Попробуйте еще раз.</string>
+
+    <string name="register_cant_title">Не можете войти?</string>
+    <string name="register_cant_desc">Если у вас возникли проблемы со входом, обратитесь в нашу техподдержку</string>
+    <string name="register_cant_phone">8 (800) 555–35–35</string>
+    <string name="register_cant_phone_intent">88005553535</string>
+    <string name="register_cant_phone_permission">Необходимо разрешить звонки</string>
+    <string name="register_write_permission_error">Необходимо разрешить запись файлов</string>
+    <string name="register_cant_mail"><u>game@checkpot.fun</u></string>
+    <string name="register_cant_mail_owner"><u>support@checkpot.fun</u></string>
+    <string name="register_cant_mail_subj">Обратная связь</string>
+    <string name="register_cant_telegram"><u>t.me/checkpot_game</u></string>
+    <string name="register_cant_telegram_url">https://t.me/checkpot_game</string>
+    <string name="register_cant_telegram_owner"><u>t.me/checkpot_support</u></string>
+    <string name="register_cant_telegram_owner_url">https://t.me/checkpot_support</string>
+    <string name="register_cant_facebook"><u>fb.com/checkpotapp</u></string>
+    <string name="register_cant_facebook_url">https://www.facebook.com/checkpotapp</string>
+    <string name="register_cant_vkontakte"><u>vk.com/checkpot</u></string>
+    <string name="register_cant_vkontakte_url">https://vk.com/checkpot</string>
+    <string name="register_cant_btn">Выполнить вход</string>
+
+    <string name="contacts_title">Контактная\nинформация</string>
+    <string name="contacts_desc">Если у вас возникли вопросы или вы заметили ошибку, пожалуйста, сообщите нам.</string>
+    <string name="contacts_btn_player">Для бизнеса</string>
+    <string name="contacts_btn_deleg">Экстренная помощь</string>
+    <string name="contacts_help_title">Экстренная\nпомощь</string>
+    <string name="contacts_help_desc">Мы свяжемся с вами по телефону и поможем решить все вопросы</string>
+    <string name="contacts_help_btn">Свяжитесь со мной</string>
+
+    <string name="profile_title">Профиль\nпользователя</string>
+    <string name="profile_photo">Фото профиля</string>
+    <string name="profile_id">Ваш Id</string>
+    <string name="profile_name">Ваше имя и фамилия</string>
+    <string name="profile_date">Дата рождения</string>
+    <string name="profile_sex">Пол</string>
+    <string name="profile_sex_m">Мужской</string>
+    <string name="profile_sex_f">Женский</string>
+    <string name="profile_btn">Сохранить изменения</string>
+    <string name="profile_agree">Настоящим выражаю, что я старше 18 лет и ознакомлен и согласен с <a href="https://s.checkpot.fun/agreement.html">политикой конфиденциальности</a>.</string>
+    <string name="profile_toast_agree">Необходимо подтвердить свое согласие</string>
+
+    <string name="raffles_title">Мои розыгрыши</string>
+    <string name="raffles_btn_current">Текущий</string>
+    <string name="raffles_btn_win">Победа</string>
+    <string name="raffles_btn_past">Прошли</string>
+    <string name="raffles_btn_retry">Повторить</string>
+    <string name="raffles_btn_maquette">Макет</string>
+    <string name="raffles_btn_active">Активные</string>
+    <string name="raffles_fail">Не удалось обновить розыгрыши</string>
+
+    <string name="raffles_pick_title">Где и как получить приз?</string>
+    <string name="raffles_pick_address">Вам необходимо прийти по адресу: </string>
+    <string name="raffles_pick_check">Покажите этот экран сотруднику компании</string>
+    <string name="raffles_pick_idr">id розыгрыша</string>
+    <string name="raffles_pick_idu">id пользователя</string>
+    <string name="raffles_pick_min">Минимальная сумма чека</string>
+    <string name="raffles_pick_joy">Наслаждаться выигрышем</string>
+
+    <string name="raffles_card_btn_pick">Забрать приз</string>
+    <string name="raffles_card_btn_not_picked">Вы не забрали приз</string>
+    <string name="raffles_card_min_receipt">от %d руб</string>
+
+    <string name="details_prizes">Призов</string>
+    <string name="details_success_title">Ваших чеков</string>
+    <string name="details_mem_max">Мест</string>
+    <string name="details_days">Дней</string>
+    <string name="details_mem_cur">Участвует</string>
+    <string name="details_btn_part">Участвовать в розыгрыше</string>
+    <string name="details_already">Вы уже участвуете в розыгрыше</string>
+    <string name="details_success">Добавить чек</string>
+    <string name="details_checking">Ваш чек находится на проверке</string>
+    <string name="details_incorrect">Ваш чек некорректен. Попробуйте еще раз</string>
+    <string name="details_again">Попробовать еще раз</string>
+    <string name="details_sum">Сумма вашего чека не соответствует условиям розыгрыша!</string>
+    <string name="details_desc_test">Если ты не любишь мясо-гриль, у тебя мало шансов полюбить Bukowski. У Bukowski много мяса. Ешь мясо с удовольствием</string>
+    <string name="details_check">Чек:</string>
+    <string name="details_guaranteed">Гарантированный приз</string>
+    <string name="details_guaranteed_desc_test">Экскурсия на закрытый мастер класс в гриль бар</string>
+    <string name="details_more">Еще розыгрыши</string>
+    <string name="details_menu_details">Документы розыгрыша</string>
+    <string name="event_min_check">Чек: От %d рублей</string>
+
+    <string name="complain_tile">Пожаловаться</string>
+    <string name="complain_choose">Выберите причину жалобы</string>
+    <string-array name="complain_causes">
+        <item>Неверное описание, фото</item>
+        <item>Неверный адрес компании </item>
+        <item>Противоречит правилам Checkpot</item>
+        <item>Непорядочный владелец</item>
+        <item>Мошенник</item>
+        <item>Другая причина</item>
+    </string-array>
+
+    <string name="complain_message_tile">Пожаловаться</string>
+    <string name="complain_message_desc">Опишите нарушение правил</string>
+    <string name="complain_message_your">Ваше сообщение</string>
+    <string name="complain_message_btn">Принять участие</string>
+
+    <string name="particip_title">Участие в розыгрыше «Куринный сендвич»</string>
+    <string name="particip_details_adress">Адрес: ул. Белинского 18</string>
+    <string name="particip_details_days">Дейстиве акции: 3 дня</string>
+    <string name="particip_details_members">Участники: Не более 20</string>
+    <string name="particip_check">Чек: от 1000 руб</string>
+    <string name="particip_load">Загрузить фото</string>
+    <string name="particip_qr">Сканировать чек</string>
+    <string name="particip_manual">Ввести данные вручную</string>
+    <string name="particip_loaded">Фото загружено</string>
+    <string name="particip_btn">Принять участие</string>
+    <string name="particip_rule">Сканируя чек, вы принимаете</string>
+    <string name="particip_rule_link">правила розыгрыша</string>
+
+    <string name="thanks_title">Желаем удачи!</string>
+    <string name="thanks_desc">Ваш чек отправлен на проверку</string>
+    <string name="thanks_btn">Мои розыгрыши</string>
+    <string name="thanks_another">Другие розыгрыши</string>
+
+    <string name="winner_title">Вы выиграли!</string>
+    <string name="winner_btn_inst">Поделиться в Instagram</string>
+    <string name="winner_prizes">Перейти в мои призы</string>
+
+    <string name="guarant_title">Вы получили гарантированный приз</string>
+
+    <string name="loser_title">Увы,\nВы не выиграли</string>
+    <string name="loser_btn">Участвовать в других</string>
+
+    <string name="delegate1_title">Привет, это кабинет представителя компании в Чекпоте</string>
+    <string name="delegate1_desc">Если вы владелец компании, то можете зарегистрироваться</string>
+    <string name="delegate1_btn">Войти</string>
+
+    <string name="delegate2_title">Это кабинет представителя компании в Checkpot</string>
+    <string name="delegate2_desc">Нам нужны данные вашей компании для активации профиля. Заполните форму в приложении или отправьте ссылку себе на почту, чтобы заполнить ее с компьютера.</string>
+    <string name="delegate2_btn">Ввести данные</string>
+    <string name="delegate2_link">Получить ссылку на веб-форму</string>
+    <string name="delegate2_mail_title">Введите ваш\ne-mail</string>
+    <string name="delegate2_mail_desc">Мы вышлем вам письмо с ссылкой на веб-форму</string>
+    <string name="delegate2_mail_hint">example@mail.ru</string>
+    <string name="delegate2_mail_btn">Отправить</string>
+    <string name="delegate2_mail_toast">Необходимо правильно указать e-mail</string>
+    <string name="delegate2_link_title">Публикация розыгрышей станет доступна после заполнения веб-формы</string>
+    <string name="delegate2_link_desc">А пока можете оформить страницу компании и ознакомиться с личным кабинетом</string>
+    <string name="delegate2_link_btn">Перейти в профиль</string>
+
+    <string name="info_title">Информация\nо компании</string>
+    <string name="info_title_mail">Электронная почта</string>
+    <string name="info_hint_mail">example@mail.ru</string>
+    <string name="info_title_form">Организационно-правовая форма</string>
+    <string name="info_hint_form">Например, ООО</string>
+    <string name="info_title_name">Наименование юр. лица</string>
+    <string name="info_hint_name">Например, Вкусный суп</string>
+    <string name="info_title_inn">ИНН</string>
+    <string name="info_title_innkpp">ИНН/КПП</string>
+    <string name="info_mask_inn">############</string>
+    <string name="info_mask_innkpp">##########/#########</string>
+    <string name="info_hint_inn">0000000000</string>
+    <string name="info_hint_innkpp">0000000000000000000</string>
+    <string name="info_title_ogrn">ОГРН</string>
+    <string name="info_hint_ogrn">0000000000000</string>
+    <string name="info_title_address">Юридический адрес</string>
+    <string name="info_hint_address">394030, ОБЛАСТЬ ВОРОНЕЖСКАЯ, ГОРОД ВОРОНЕЖ, УЛИЦА РЕВОЛЮЦИИ 1905 ГОДА, ДОМ 66, ОФИС 40</string>
+    <string name="info_title_bik">БИК банка</string>
+    <string name="info_hint_bik">000000000</string>
+    <string name="info_title_score">Расчетный счет</string>
+    <string name="info_hint_score">00000000000000000000</string>
+    <string name="info_title_fio">ФИО уполномоченного лица</string>
+    <string name="info_hint_fio">Например, Иванов И.И.</string>
+    <string name="info_hint_ip">Например, ИП Иванов Иван Иванович</string>
+    <string name="info_agreement">Я даю свое согласие\nна обработку</string>
+    <string name="info_link">персональных данных</string>
+    <string name="info_link_url">http://checkpot.fun/privacy_policy.html</string>
+    <string name="info_btn">Отправить на модерацию</string>
+    <string name="info_agree_toast">Необходимо согласие на обработку персональных данных</string>
+    <string-array name="inf_forms">
+        <item>ООО</item>
+        <item>ИП</item>
+    </string-array>
+
+    <string name="info_sing_title">Пожалуйста распишитесь</string>
+
+    <string name="info_done_title">Отлично!</string>
+    <string name="info_done_desc">Это было не просто, но Вы справились! За это мы дарим вам один бесплатный розыгрыш.</string>
+    <string name="info_done_btn">Перейти в профиль.</string>
+
+    <string name="edit_place_title">Профиль компании</string>
+    <string name="edit_place_title_logo">Логотип компании</string>
+    <string name="edit_place_title_name">Название компании</string>
+    <string name="edit_place_hint_name">Например, Азбука</string>
+    <string name="edit_place_title_photo">Фото компании</string>
+    <string name="edit_place_load_photo">Загрузить фото </string>
+    <string name="edit_place_title_address">Адрес</string>
+    <string name="edit_place_hint_address">Москва, Ул. Белинского 108</string>
+    <string name="edit_place_title_desc">Описание компании</string>
+    <string name="edit_place_hint_desc">Ваш текст</string>
+    <string name="edit_place_btn_save">Сохранить</string>
+    <string name="edit_place_btn_preview">Предпросмотр</string>
+    <string name="edit_place_toast_limit">Можно загружать не более 5-ти фотографий</string>
+    <string name="edit_place_need_name">Введите название компании.</string>
+    <string name="edit_place_need_desc">Введите описание компании.</string>
+    <string name="edit_place_need_address">Укажите адрес компании.</string>
+    <string name="edit_place_null_address">Адрес не найден. Укажите пожалуйста еще раз.</string>
+
+    <string name="menu_player_map">Карта</string>
+    <string name="menu_player_raffles">Розыгрыши</string>
+    <string name="menu_player_wins">Победы</string>
+    <string name="menu_delegate_raffles">Розыгрыши</string>
+    <string name="menu_delegate_add">Добавить</string>
+    <string name="menu_delegate_winners">Победители</string>
+
+    <string name="place_title_test">Буковски гриль</string>
+    <string name="place_desc_test">Если ты не любишь мясо-гриль, у тебя мало шансов полюбить Bukowski. У Bukowski много мяса. Ешь мясо с удовольствием</string>
+    <string name="place_address">Адрес: </string>
+    <string name="place_address_test">ул. Белинского 18</string>
+    <string name="place_num_raffles">Активных\nрозыгрышей</string>
+    <string name="place_num_members">Участников\nсейчас</string>
+    <string name="place_nume_done">Розыгрышей\nпроведено</string>
+    <string name="place_raffles">Активные розыгрыши</string>
+    <string name="place_raffles_play">Розыгрышей проведено</string>
+
+    <string name="card_not_yet_title_player">У вас пока нет побед</string>
+    <string name="card_not_yet_title_delegate">У вас нет активных\nрозыгрышей</string>
+    <string name="card_not_yet_title">Вы пока не создали\nрозыгрышей</string>
+    <string name="card_not_yet_btn_player">Участвовать в розыгрышах</string>
+    <string name="card_not_yet_btn_delegate">Создать розыгрыш</string>
+
+    <string name="side_menu_unknown_name">Имя неизвестно</string>
+    <string name="side_menu_id">id: %1$s</string>
+    <string name="side_menu_edit">Редактировать</string>
+    <string name="side_menu_rating">Рейтинг пользователей</string>
+    <string name="side_menu_contacts">Связаться с нами</string>
+    <string name="side_menu_benefit">Рассчитать выгоду</string>
+    <string name="side_menu_guarant">Гарантированные призы</string>
+    <string name="side_menu_tariffs">Тарифы</string>
+    <string name="side_menu_faq">Частые вопросы</string>
+    <string name="side_menu_info">Информация о компании</string>
+    <string name="side_menu_promo">Промоматериалы</string>
+    <string name="side_menu_notify_on">Включить уведомления</string>
+    <string name="side_menu_notify_off">Отключить уведомления</string>
+    <string name="side_menu_delegate">Кабинет представителя</string>
+    <string name="side_menu_player">Кабинет игрока</string>
+    <string name="side_menu_exit">Выйти</string>
+    <string name="side_menu_raffles">Осталось %1$s</string>
+    <string name="side_menu_date">Оплачено до</string>
+    <string name="side_menu_no_tariff">Тариф не оплачен</string>
+
+    <string name="advantage_title">Преимущества участия в нашей программе</string>
+    <string name="advantage_btn">Регистрация компании</string>
+
+    <string name="advantage_card_title">test</string>
+    <string name="advantage_card_decs">testdesc</string>
+    <string name="advantage_card_title_average_check">Увеличение среднего чека</string>
+    <string name="advantage_card_average_desc_check">Гости платят больше, участвуя в розыгрыше призов.</string>
+    <string name="advantage_card_title_add_check">Розыгрыши призов по чекам</string>
+    <string name="advantage_card_desc_add_check">Поощряйте реальных покупателей среди ваших подписчиков.</string>
+    <string name="advantage_card_title_digital">Оцифровка ваших гостей</string>
+    <string name="advantage_card_desc_digital">Розыгрыши призов мотивируют подписаться на ваше сообщество в социальной сети Вконтакте.</string>
+    <string name="advantage_card_title_loyalty">Лояльность</string>
+    <string name="advantage_card_desc_loyalty">Истории ваших гостей – самая эффективная реклама.</string>
+    <string name="advantage_card_title_law">Все по закону</string>
+    <string name="advantage_card_desc_law">На каждый розыгрыш вы получите комплект документов в соответствии с законодательством РФ.</string>
+    <string name="advantage_card_title_integration">Без интеграций</string>
+    <string name="advantage_card_desc_integration">Не требует подключения к вашей системе учета. Начать пользоваться очень легко.</string>
+    <string name="advantage_card_title_emotions">Новые эмоции</string>
+    <string name="advantage_card_desc_emotions">С Checkpot будут приятно удивлены постоянные гости и новые посетители.</string>
+
+    <string name="map_city_detecting">Определяем местоположение</string>
+    <string name="map_city_fail_raffles">Не удалось загрузить розыгрыши</string>
+    <string name="map_city_selected_title">В <font color='#7ed084'>г. %1$s</font> - %2$d компаний</string>
+    <string name="map_city_unknown">неизвестном</string>
+    <string name="map_btn_start">Начать</string>
+    <string name="map_btn_not_mine">Это не мой город</string>
+    <string name="map_enter_title">Введите название своего города</string>
+    <string name="map_enter_no">Такой город не найден. Проверьте введеное название.</string>
+    <string name="map_player_menu_rozygryshi">Розыгрыши</string>
+    <string name="map_btn_map">Карта</string>
+    <string name="map_btn_list">Список</string>
+    <string name="map_your_bill">Планируемый чек (руб.)</string>
+    <string name="map_min_seek">0</string>
+    <string name="map_max_seek">5000</string>
+    <string name="map_doubleclick_exit">Нажмите дважды, чтобы выйти</string>
+
+    <string name="not_activated_title">Ваш аккаунт еще\nне активирован</string>
+    <string name="not_activated_description">Данные вашей компании\nнаходятся на проверке</string>
+    <string name="not_activated_desс_form">Мы ждем заполненную веб-форму с реквизитами вашей компании</string>
+    <string name="not_activated_title_tarif">Недостаточно розыгрышей</string>
+    <string name="not_activated_desc_tarif">Необходимо оплатить тариф</string>
+    <string name="support_mail">support@checkpot.fun</string>
+    <string name="support_mail_subj">Поддержка</string>
+    <string name="telegram_link">t.me/checkpot_support</string>
+    <string name="telegram_link_url">https://t.me/checkpot_support</string>
+    <string name="btn_account">Перейти в кабинет</string>
+    <string name="not_activated_again">Отправить еще раз</string>
+
+    <string name="add_raffles_title">Добавление розыгрыша</string>
+    <string name="add_raffles_settings">Расширенные настройки</string>
+    <string name="add_raffles_fail">Не удалось создать розыгрыш. Попробуйте позже.</string>
+    <string name="add_rafffe_num_place">#%d место</string>
+    <string name="prize_name">Название приза</string>
+    <string name="prize_name_hint">Например, Стейк из лося</string>
+    <string name="prize_photo_load">Загрузить фото приза</string>
+    <string name="prize_photo_load_two">(Рекомендуемое разрешение 1000x251 px)</string>
+    <string name="type_raffles">Тип розыгрыша</string>
+    <string name="btn_to_time">По времени</string>
+    <string name="btn_to_amt">По количеству участников</string>
+    <string name="btn_to_time_and_amt">По времени и количеству</string>
+    <string name="begin_hint">Начало</string>
+    <string name="finish_hint">Окончание</string>
+    <string name="amt_member">Количество участников</string>
+    <string name="amt_member_hint">100</string>
+    <string name="amt_winner">Количество победителей</string>
+    <string name="min_check">Минимальный чек</string>
+    <string name="min_check_hint">1000</string>
+    <string name="about_raffles">О розыгрыше</string>
+    <string name="about_raffles_hint">Ваш текст</string>
+    <string name="total_prizes">Общая стоимость всех призов</string>
+    <string name="total_prizes_hint">5000 руб</string>
+    <string name="guaranteed_prize">Гарантированный приз</string>
+    <string name="guaranteed_prize_name_hint">Например, Чашка эспрессо</string>
+    <string name="add_raffles_publication">Опубликовать</string>
+    <string name="add_raffles_step_2">К шагу 2 из 3</string>
+    <string name="add_raffles_preview">Предпросмотр</string>
+    <string name="different_prize">Разные призы</string>
+    <string name="equal_prize">Одинаковые призы</string>
+    <string name="winner_place">#1 место</string>
+    <string name="one">1</string>
+    <string name="three">3</string>
+    <string name="five">5</string>
+    <string name="amt_winners">Количество победителей</string>
+    <string name="amt_winners_hint">10</string>
+    <string name="security">Рекомендуемая безопасность</string>
+    <string name="security_description">Сфотографируйте победителя с призом, чтобы избежать претензий с его стороны. При стоимости свыше 4000 рублей, обязательно составление акта приема-передачи приза. Необходимые документы будут отправлены Вам на почту после публикации розыгрыша.</string>
+
+    <string name="title_tariff">Выберите подходящий тариф</string>
+    <string name="subtitle_tariff">После выбора вы сможете создавать розыгрыши.Тариф можно сменить в личном кабинете</string>
+    <string name="tariff_package">Тарифный пакет</string>
+    <string name="tariff_description_simple">Появиться на карте розыгрышей призов, получить положительный отклик от своих гостей, а в кассе увеличить выручку - вот основной принцип самого доступного тарифа.</string>
+    <string name="tariff_settings_min">Минимальные настройки розыгрышей</string>
+    <string name="tariff_support">Поддержка</string>
+    <string name="tariff_description_optima">Регулярные розыгрыши призов значительно увеличат чек и развлекут ваших гостей, а расширенные настройки добавят вашей компании индивидуальности.</string>
+    <string name="tariff_settings_max">Расширенные настройки розыгрышей</string>
+    <string name="tariff_description_powerful">Используйте сервис на полную мощность и проводите одновременно несколько розыгрышей призов с чеками разных ценовых категорий.</string>
+    <string name="tariff_description_royal">Особое место на карте розыгрышей тому, кто эксперементирует каждый день и создает в своей компании атмосферу азарта и веселья с тарифом "Королевский".</string>
+    <string name="tariff_map_marked">Выделение цветом на карте</string>
+    <string name="tariff_btn_activate">Подключить</string>
+
+    <string name="payment_method_title">Способы оплаты</string>
+    <string name="payment_method_subtitle">Выберете удобный для вас способ оплаты</string>
+    <string name="bank_card_title">Банковская карта</string>
+    <string name="bank_card_subtitle">Visa, Visa Electron, Maestro…</string>
+    <string name="cashless_payments_title">Безналичный расчет</string>
+    <string name="cashless_payments_subtitile">через указанные реквизиты</string>
+    <string name="yandex_money_title">Яндекс Деньги</string>
+    <string name="payment_subtitle">оплата через сервис</string>
+    <string name="google_pay_title">Google Pay</string>
+    <string name="qiwi_money_title">QIWI Кошелек</string>
+    <string name="card_description">Вы можете выполнить оплату картами Visa, Visa Electron, Maestro или Master Card</string>
+    <string name="card_number">Номер карты</string>
+    <string name="card_number_hint">0000 0000 0000 0000</string>
+    <string name="card_validity">Срок действия</string>
+    <string name="card_validity_hint">0000</string>
+    <string name="cvv">CVV</string>
+    <string name="cvv_hint">000</string>
+    <string name="card_owner">Владелец карты</string>
+    <string name="card_owner_hint">IVAN IVANOV</string>
+    <string name="card_add">Добавить</string>
+
+    <string name="raffles_created_title">Розыгрыш на модерации и скоро будет опубликован.</string>
+    <string name="raffles_created_details">Перейти в мои розыгрыши</string>
+    <string name="steak_ribay">Стейк Рибай</string>
+    <string name="btn_go_to_instagram">Поделиться в Instagram</string>
+
+    <string name="winners_title">Победители</string>
+    <string name="winners_not_received">Не получили</string>
+    <string name="winners_received">Получили</string>
+    <string name="id_hint">Введите Id</string>
+    <string name="rejection_reason">Опишите причину отказа</string>
+    <string name="btn_send">Отправить</string>
+    <string name="btn_cancel">Отменить</string>
+
+    <string name="menuSettings">Settings</string>
+    <string name="menuFruits">Fruits Events</string>
+    <string name="menuInfo">Library Info</string>
+    <string name="titleMainActivity">Yandex Metrica for Apps</string>
+    <string name="titleListActivity">Fruits Screen</string>
+    <string name="serviceLabel">MetricaUsageApplicationService</string>
+
+    <string name="goListActivity">GO TO FRUITS LIST ACTIVITY!</string>
+
+    <string name="sendReportsSection"># SEND REPORTS SECTION #</string>
+    <string name="sendCustomEvent">SEND CUSTOM EVENT</string>
+    <string name="sendCustomError">SEND CUSTOM ERROR</string>
+    <string name="sendJson">SEND JSON</string>
+    <string name="sendAttributes">SEND ATTRIBUTES</string>
+    <string name="sendAutoCrash">SIMULATE CRASH</string>
+    <string name="sendAutoNativeCrash">SIMULATE NATIVE CRASH</string>
+    <string name="sendEventsBuffer">SEND ACCUMULATED EVENTS</string>
+
+    <string name="sessionOptionsSection"># SESSION OPTIONS SECTION #</string>
+    <string name="setSessionTimeoutTenSeconds">SESSION TIMEOUT IS 10 SECONDS</string>
+    <string name="setSessionTimeoutOneMinute">SESSION TIMEOUT IS 1 MINUTE</string>
+    <string name="setSessionTimeoutFiveMinutes">SESSION TIMEOUT IS 5 MINUTES</string>
+    <string name="startNewSessionManually">START NEW SESSION MANUALLY</string>
+
+    <string name="sendOptionsSection"># SEND OPTIONS SECTION #</string>
+    <string name="setEnvironmentValues">SET ENVIRONMENT_VALUES</string>
+
+    <string name="no_activity_raffles">"нет активных розыгрышей</string>
+    <string name="notify_on_new">"Оповестить о новых"</string>
+
+    <string name="promo_title">Промоматериалы</string>
+    <string name="promo_desc">Отправьте промоматериалы на почту типографии</string>
+    <string name="promo_hint">Введите e-mail</string>
+    <string name="promo_hint_vk">https://vk.com/Сообщество</string>
+    <string name="promo_btn">Отправить</string>
+    <string name="promo_mail_toast">Необходимо правильно указать e-mail</string>
+    <string name="promo_mail_vk_toast">Необходимо правильно указать ссылку ВК</string>
+
+    <string name="info_title_company">Информация\nо вашей компании</string>
+    <string name="info_title_company_reg">Регистрация\nвашей компании</string>
+    <string name="btn_understand"> Я понял(а), приступим</string>
+    <string name="description_greeting">Приветствую. Я Checkpot-помощник и я помогу вам зарегистрировать вашу \nкомпанию в приложении. \nСледуйте моим подсказкам.</string>
+    <string name="email_text">Ваша электронная\nпочта</string>
+    <string name="step_two">К шагу 2 из 4</string>
+    <string name="step_three">К шагу 3 из 4</string>
+    <string name="description_email">Отлично, теперь заполните почту. Туда мы будем присылать все необходимые документы.</string>
+    <string name="description_inn">Вы на середине пути! Введите ИНН для идентификации чеков вашей компании.</string>
+    <string name="inn_title">ИНН\nвашей компании</string>
+    <string name="inn_hint">0000000000</string>
+    <string name="btn_inn">Проверить ИНН</string>
+    <string name="description_data">Пожалуйста, проверьте ваши данные и перейдите к следующему шагу.</string>
+    <string name="title_text_data_company">Проверьте данные\nвашей компании</string>
+    <string name="title_text_data_setting_company">Введите данные\nвашей компании</string>
+    <string name="description_help">Оу...проверьте правильность\nзаполнения полей</string>
+    <string name="score">Это необходимо для комплекта документов на проведение розыгрышей</string>
+    <string name="title_score">Расчетный счет вашей компании</string>
+    <string name="step_four">К шагу 4 из 4</string>
+    <string name="title_bik">БИК банка вашей компании</string>
+    <string name="description_bik_help">Почти справились. Заполните поле и отправляйте на модерацию. Мы все проверим и вы сможете пользоваться приложением.</string>
+    <string name="description_reg_final">Это было непросто, но вы справились! За это мы дарим вам</string>
+    <string name="description_reg_final2">один бесплатный розыгрыш.</string>
+    <string name="please_sign">Пожалуйста поставьте подпись.</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="sign_added">Подпись добавлена.</string>
+    <string name="prize_pos">место</string>
+
+    <string name="scanner_head_text">Поднесите qr-код чека\nв активную область экрана</string>
+    <string name="scanner_button">Ввести данные вручную</string>
+    <string name="bill_head">Ввести данные с чека</string>
+    <string name="bill_fn">Номер фискального накопителя (ФН)</string>
+    <string name="bill_fpd">Фиксальный признак документа (ФП/ФПД)</string>
+    <string name="bill_fd">Номер фискального документа (ФД)</string>
+    <string name="bill_sum">Сумма (руб)</string>
+    <string name="bill_date">Дата покупки</string>
+    <string name="bill_btn">Отправить на проверку</string>
+    <string name="bill_lines">Все поля должны быть заполнены</string>
+    <string name="bill_empty_line">Заполните поле</string>
+    <string name="bad_qr">Неверный QR-код!</string>
+    <string name="bill_not_new">Данный чек уже участвует или находится на проверке!</string>
+    <string name="notification">Текст Уведомления</string>
+    <string name="dialog_company_reg">Зарегистрируйте компанию с помощью телефона</string>
+    <string name="dialog_company_reg_evotor">Для продолжения вам необходимо зарегистрировать компанию в приложении Checkpot на вашем смартфоне</string>
+    <string name="dialog_place_reg">Создайте заведение с помощью телефона</string>
+    <string name="dialog_place_reg_evotor">Заполните профиль компании в приложении Checkpot на вашем смартфоне</string>
+    <string name="btn_reg_evotor">Обновить</string>
+    <string name="confirm_prize">Подтвердить выдачу приза?</string>
+    <string name="back_to_step">Вернуться к шагу 1</string>
+    <string name="continue_payment">Перейти к оплате</string>
+    <string name="tariff_1_day">на 1 день (219 руб)</string>
+    <string name="tariff_7_days">на 7 дней (529 руб)</string>
+    <string name="tariff_30_days">на 30 дней (979 руб)</string>
+    <string name="tariff_less_100">до 100 человек (529 руб)</string>
+    <string name="tariff_more_100">более 100 человек (979 руб)</string>
+    <string name="tariff_adds">Дополнительные услуги</string>
+    <string name="tariff_total">Итого к оплате</string>
+    <string name="tariff_target_text">Таргетированная реклама</string>
+    <string name="tariff_target_price">х10 просмотров, 1 200 руб</string>
+    <string name="tariff_promotion_text">Продвижение в списке</string>
+    <string name="tariff_promotion_price">х5 просмотров, 500 руб</string>
+    <string name="members_error">Заполните количество участников розыгрыша.</string>
+    <string name="event_information_title">Результаты розыгрыша</string>
+    <string name="event_information_btn_download">Скачать базу участников</string>
+    <string name="event_information_btn_event">К экрану выдачи призов</string>
+    <string name="event_information_txt_1">Количество участников</string>
+    <string name="event_information_txt_2">Общая сумма всех чеков</string>
+    <string name="event_information_txt_3">Средний чек</string>
+    <string name="event_information_txt_4">Переходы с промоматериалов</string>
+    <string name="edit_company_title">Информация о компании</string>
+    <string name="edit_company_email">Электронная почта</string>
+    <string name="edit_company_type">Организационно-правовая форма</string>
+    <string name="edit_company_name">Наименование юр. лица</string>
+    <string name="edit_company_inn_kpp">ИНН/КПП</string>
+    <string name="edit_company_ogrn">ОГРН</string>
+    <string name="edit_company_adress">Юридический адрес</string>
+    <string name="edit_company_bik">БИК Банка</string>
+    <string name="edit_company_score">Расчетный счет</string>
+    <string name="edit_company_fio">ФИО уполномоченного лица</string>
+    <string name="edit_company_btn">Отправить на модерацию</string>
+
+</resources>

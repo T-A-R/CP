@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <irongate.checkpot.view.screens.player.event.DetailBgTop
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_prize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="19dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/prize_name"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txt_winning_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_prize"
+            android:layout_marginLeft="19dp"
+            android:layout_marginTop="15dp"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:id="@+id/view_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_winning_place"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/edit_prize"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:layout_marginLeft="19dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bg_selector_blue"
+                android:hint="@string/prize_name_hint"
+                android:inputType="textCapSentences"
+                android:maxLength="30"
+                android:padding="19dp"
+                android:textSize="22sp" />
+
+        </RelativeLayout>
+
+        <irongate.checkpot.view.screens.delegate.addedRaffle.PrizeUploadView
+            android:id="@+id/prize_load_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_edit"></irongate.checkpot.view.screens.delegate.addedRaffle.PrizeUploadView>
+    </irongate.checkpot.view.screens.player.event.DetailBgTop>
+</LinearLayout>

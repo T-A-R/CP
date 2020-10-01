@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/iceBlue">
+
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:background="@drawable/bg_circle_yellow"
+        android:padding="20dp"
+        android:scaleType="fitCenter"
+        android:tint="@android:color/black"
+        app:srcCompat="@drawable/ico_back" />
+
+    <TextView
+        android:id="@+id/title"
+        fontPath="futura_pt_medium.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:gravity="center_vertical"
+        android:text="@string/info_title_company_reg"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_26ssp"
+        tools:ignore="MissingPrefix" />
+
+    <irongate.checkpot.view.screens.delegate.companyRegistration.PopupView
+        android:id="@+id/popup_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_understand"
+        android:layout_below="@+id/title">
+
+    </irongate.checkpot.view.screens.delegate.companyRegistration.PopupView>
+
+
+    <Button
+        android:id="@+id/btn_understand"
+        fontPath="futura_pt_book.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="false"
+        android:layout_centerVertical="false"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/bg_btn_blue_36"
+        android:text="@string/btn_understand"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_18ssp"
+        tools:ignore="MissingPrefix" />
+
+</RelativeLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cont"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.8"
+        android:background="@android:color/black">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_panel_5">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_circle_dark_gray"
+            android:padding="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ico_back" />
+
+        <ImageButton
+            android:id="@+id/btn_done"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_circle_green"
+            android:padding="14dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ico_done" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:text="@string/info_sing_title"
+            android:textColor="@android:color/black"
+            android:textSize="22sp" />
+
+        <RelativeLayout
+            android:id="@+id/cont_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:background="@android:drawable/dialog_holo_light_frame">
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cont_dog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom">
+    </RelativeLayout>
+
+</RelativeLayout>

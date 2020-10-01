@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cont_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="0.8"
+    android:background="@android:color/black"
+    android:focusableInTouchMode="true"
+    android:scrollbars="none">
+
+
+    <RelativeLayout
+        android:id="@+id/cont"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/btn_close"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@drawable/bg_circle_yellow"
+            android:padding="17dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ico_x" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/bg_panel_10"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/bill_head"
+                fontPath="futura_pt_book.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingRight="@dimen/_15sdp"
+                android:text="@string/bill_head"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_26ssp"
+                tools:ignore="MissingPrefix" />
+
+            <LinearLayout
+                android:id="@+id/panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/bg_panel_5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/bill_fn"
+                    fontPath="futura_pt_book.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:alpha="0.3"
+                    android:text="@string/bill_fn"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_13ssp"
+                    tools:ignore="MissingPrefix" />
+
+                <EditText
+                    android:id="@+id/edit_fn"
+                    fontPath="futura_pt_book.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_48sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:background="@drawable/bg_selector_blue"
+                    android:ems="10"
+                    android:enabled="true"
+                    android:inputType="number"
+                    android:maxLength="16"
+                    android:maxLines="1"
+                    android:padding="@dimen/_12sdp"
+                    android:textSize="22sp"
+                    tools:ignore="MissingPrefix" />
+
+                <TextView
+                    android:id="@+id/fn_help"
+                    fontPath="futura_pt_book.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/_13ssp"
+                    android:text="@string/bill_empty_line"
+                    android:visibility="invisible"
+                    tools:ignore="MissingPrefix" />
+
+                <TextView
+                    android:id="@+id/bill_fpd"
+                    fontPath="futura_pt_book.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:alpha="0.3"
+                    android:text="@string/bill_fpd"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_13ssp"
+                    tools:ignore="MissingPrefix" />
+
+                <EditText
+                    android:id="@+id/edit_fpd"
+                    fontPath="futura_pt_book.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_48sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:background="@drawable/bg_selector_blue"
+                    android:ems="10"
+                    android:enabled="true"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:padding="@dimen/_12sdp"
+                    android:textSize="22sp"
+                    tools:ignore="MissingPrefix" />
+
+                <TextView
+                    android:id="@+id/fpd_help"
+                    fontPath="futura_pt_book.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/_13ssp"
+                    android:text="@string/bill_empty_line"
+                    android:visibility="invisible"
+                    tools:ignore="MissingPrefix" />
+
+                <TextView
+                    android:id="@+id/bill_fd"
+                    fontPath="futura_pt_book.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:alpha="0.3"
+                    android:text="@string/bill_fd"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_13ssp"
+                    tools:ignore="MissingPrefix" />
+
+                <EditText
+                    android:id="@+id/edit_fd"
+                    fontPath="futura_pt_book.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_48sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:background="@drawable/bg_selector_blue"
+                    android:ems="10"
+                    android:enabled="true"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:padding="@dimen/_12sdp"
+                    android:textSize="22sp"
+                    tools:ignore="MissingPrefix" />
+
+                <TextView
+                    android:id="@+id/fd_help"
+                    fontPath="futura_pt_book.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/_13ssp"
+                    android:text="@string/bill_empty_line"
+                    android:visibility="invisible"
+                    tools:ignore="MissingPrefix" />
+
+                <TextView
+                    android:id="@+id/bill_sum"
+                    fontPath="futura_pt_book.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:alpha="0.3"
+                    android:text="@string/bill_sum"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_13ssp"
+                    tools:ignore="MissingPrefix" />
+
+
+                <EditText
+                    android:id="@+id/edit_sum"
+                    fontPath="futura_pt_book.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_48sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:background="@drawable/bg_selector_blue"
+                    android:ems="10"
+                    android:enabled="true"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:padding="@dimen/_12sdp"
+                    android:textSize="22sp"
+                    tools:ignore="MissingPrefix" />
+
+                <TextView
+                    android:id="@+id/sum_help"
+                    fontPath="futura_pt_book.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/_13ssp"
+                    android:text="@string/bill_empty_line"
+                    android:visibility="invisible"
+                    tools:ignore="MissingPrefix" />
+
+                <TextView
+                    android:id="@+id/bill_date"
+                    fontPath="futura_pt_book.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:alpha="0.3"
+                    android:text="@string/bill_date"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_13ssp"
+                    tools:ignore="MissingPrefix" />
+
+                <TextView
+                    android:id="@+id/edit_date"
+                    fontPath="futura_pt_book.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_48sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:background="@drawable/bg_selector_blue"
+                    android:ems="10"
+                    android:enabled="true"
+                    android:maxLength="16"
+                    android:maxLines="1"
+                    android:padding="@dimen/_12sdp"
+                    android:textSize="22sp"
+                    tools:ignore="MissingPrefix,TextFields" />
+
+                <TextView
+                    android:id="@+id/date_help"
+                    fontPath="futura_pt_book.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/_13ssp"
+                    android:text="@string/bill_empty_line"
+                    android:visibility="invisible"
+                    tools:ignore="MissingPrefix" />
+
+                <Button
+                    android:id="@+id/btn_send"
+                    fontPath="futura_pt_book.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginLeft="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_25sdp"
+                    android:layout_marginBottom="@dimen/_30sdp"
+                    android:background="@drawable/bg_btn_green_36"
+                    android:text="@string/bill_btn"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_18ssp"
+                    android:visibility="visible"
+                    tools:ignore="MissingPrefix" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
+

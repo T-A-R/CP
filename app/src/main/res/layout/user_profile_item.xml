@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+
+    <!--<com.chauthai.swipereveallayout.SwipeRevealLayout-->
+    <!--android:id="@+id/swipe_reveal_layout_added"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:dragEdge="left"-->
+    <!--app:minDistRequestDisallowParent="150dp"-->
+    <!--app:mode="same_level">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/added"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="left">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="82dp"-->
+    <!--android:layout_height="100dp"-->
+    <!--android:src="@drawable/rectangle_green" />-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="18dp"-->
+    <!--android:layout_height="18dp"-->
+    <!--android:layout_marginLeft="32dp"-->
+    <!--android:layout_marginTop="24dp"-->
+    <!--android:src="@drawable/ico_done" />-->
+
+    <!--</RelativeLayout>-->
+
+    <!--</LinearLayout>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <!--<com.chauthai.swipereveallayout.SwipeRevealLayout-->
+        <!--android:id="@+id/swipe_reveal_layout_deleted"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:dragEdge="right"-->
+        <!--app:minDistRequestDisallowParent="150dp"-->
+        <!--app:mode="same_level">-->
+
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/deleted"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="right">-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="82dp"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:src="@drawable/rectangle_red" />-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="18dp"-->
+        <!--android:layout_height="18dp"-->
+        <!--android:layout_marginLeft="32dp"-->
+        <!--android:layout_marginTop="24dp"-->
+        <!--android:src="@drawable/trash" />-->
+
+        <!--</RelativeLayout>-->
+
+        <RelativeLayout
+            android:id="@+id/profile_cont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_gravity="center_vertical"
+                    android:paddingRight="15dp"
+                    android:src="@drawable/ico_profile"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/winner_name"
+                        fontPath="futura_pt_book.ttf"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:maxLines="1"
+                        android:text="Name FamilyName"
+                        android:textColor="@android:color/black"
+                        app:autoSizeMaxTextSize="22dp"
+                        app:autoSizeMinTextSize="12dp"
+                        app:autoSizeStepGranularity="2sp"
+                        app:autoSizeTextType="uniform"
+                        tools:ignore="MissingPrefix" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/winner_id_def"
+                            fontPath="futura_pt_book.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:text="id: "
+                            android:textSize="18dp"
+                            tools:ignore="MissingPrefix" />
+
+                        <TextView
+                            android:id="@+id/winner_id"
+                            fontPath="futura_pt_book.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00000"
+                            android:textSize="18dp"
+                            tools:ignore="MissingPrefix" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/winner_phone"
+                        fontPath="futura_pt_book.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="https://vk.com/id000000000"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/_11ssp"
+                        tools:ignore="MissingPrefix" />
+
+                    <TextView
+                        android:id="@+id/raffle_name"
+                        fontPath="futura_pt_book.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Raffle Name"
+                        android:textSize="18dp"
+                        tools:ignore="MissingPrefix" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+
+                <RelativeLayout
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp">
+
+                    <ImageButton
+                        android:id="@+id/ico_accept"
+                        android:layout_width="@dimen/_18sdp"
+                        android:layout_height="@dimen/_18sdp"
+                        android:layout_marginStart="@dimen/_9sdp"
+                        android:layout_marginLeft="@dimen/_9sdp"
+                        android:layout_marginTop="@dimen/_9sdp"
+                        android:background="@drawable/ico_done"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/done"
+                        android:tint="@color/green" />
+
+                    <ImageButton
+                        android:id="@+id/btn_accept"
+                        android:layout_width="@dimen/_36sdp"
+                        android:layout_height="@dimen/_36sdp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/bg_frame_green_3"
+                        android:padding="@dimen/_3sdp"
+                        android:scaleType="fitCenter"
+                        android:tint="@color/green" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="@dimen/_36sdp"
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_marginLeft="@dimen/_5sdp">
+
+
+                    <ImageButton
+                        android:id="@+id/ico_decline"
+                        android:layout_width="@dimen/_18sdp"
+                        android:layout_height="@dimen/_18sdp"
+                        android:layout_marginStart="@dimen/_9sdp"
+                        android:layout_marginLeft="@dimen/_9sdp"
+                        android:layout_marginTop="@dimen/_9sdp"
+                        android:background="@drawable/ico_done"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/cross_grey"
+                        android:tint="@color/red" />
+
+                    <ImageButton
+                        android:id="@+id/btn_decline"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/bg_frame_red_3"
+                        android:padding="@dimen/_3sdp"
+                        android:scaleType="fitCenter"
+                        android:tint="@color/blue" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+        <!--</com.chauthai.swipereveallayout.SwipeRevealLayout>-->
+
+
+    </LinearLayout>
+
+    <!--</com.chauthai.swipereveallayout.SwipeRevealLayout>-->
+
+</LinearLayout>

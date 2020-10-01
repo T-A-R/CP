@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/iceBlue">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/cont_top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_weight="1"
+                android:text="@string/promo_title"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_30ssp" />
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:text="@string/promo_desc"
+                android:textColor="@android:color/black"
+                android:textSize="22sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <EditText
+                    android:id="@+id/edit_vk"
+                    fontPath="futura_pt_book.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:background="@drawable/bg_selector_blue"
+                    android:ems="10"
+                    android:hint="@string/promo_hint_vk"
+                    android:inputType="textEmailAddress"
+                    android:padding="16dp"
+                    android:textSize="22sp"
+                    tools:ignore="MissingPrefix" />
+
+                <EditText
+                    android:id="@+id/edit_mail"
+                    fontPath="futura_pt_book.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:layout_below="@id/edit_vk"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:background="@drawable/bg_selector_blue"
+                    android:ems="10"
+                    android:hint="@string/promo_hint"
+                    android:inputType="textEmailAddress"
+                    android:padding="16dp"
+                    android:textSize="22sp"
+                    tools:ignore="MissingPrefix" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn"
+                fontPath="futura_pt_book.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/bg_btn_blue_36"
+                android:text="@string/promo_btn"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:visibility="visible"
+                tools:ignore="MissingPrefix" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cont_reg2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+
+  <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:scaleType="centerCrop"
+      app:srcCompat="@drawable/bg_default" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/cont_top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/txt_register2_title_sms">
+
+                <TextView
+                    android:id="@+id/txt_register2_title_enter"
+                    fontPath="futura_pt_medium.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="@string/to_enter"
+                    android:textColor="@android:color/black"
+                    android:textSize="60sp"
+                    android:visibility="gone"
+                    tools:ignore="MissingPrefix" />
+
+                <TextView
+                    android:id="@+id/txt_register2_title_reg"
+                    fontPath="futura_pt_medium.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="@string/to_register"
+                    android:textColor="@android:color/black"
+                    android:textSize="34sp"
+                    android:visibility="gone"
+                    tools:ignore="MissingPrefix" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_register2_title_sms"
+                fontPath="futura_pt_book.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/input_register2"
+                android:layout_marginLeft="37dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/register2_title_code"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp"
+                tools:ignore="MissingPrefix" />
+
+            <EditText
+                android:id="@+id/input_register2"
+                fontPath="futura_pt_book.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="34dp"
+                android:layout_marginRight="34dp"
+                android:background="@drawable/bg_selector_green"
+                android:ems="10"
+                android:hint="1234"
+                android:inputType="number"
+                android:maxLength="4"
+                android:padding="16dp"
+                android:textSize="22sp"
+                tools:ignore="MissingPrefix" />
+
+            <Button
+                android:id="@+id/btn_register2"
+                fontPath="futura_pt_book.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/bg_btn_green_36"
+                android:text="@string/to_enter"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                tools:ignore="MissingPrefix" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/txt_register2_cant"
+                fontPath="futura_pt_book.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="@string/register2_txt_nosms"
+                android:textColor="@android:color/black"
+                android:textSize="22sp"
+                tools:ignore="MissingPrefix" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

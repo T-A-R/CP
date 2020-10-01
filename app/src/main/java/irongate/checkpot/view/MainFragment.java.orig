@@ -1,0 +1,258 @@
+package irongate.checkpot.view;
+
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
+
+import irongate.checkpot.MainActivity;
+import irongate.checkpot.R;
+import irongate.checkpot.checkpotAPI.CheckpotAPI;
+import irongate.checkpot.model.User;
+import irongate.checkpot.checkpotAPI.models.Place;
+import irongate.checkpot.view.screens.IMainFragment;
+import irongate.checkpot.view.screens.common.place.PlaceFragment;
+import irongate.checkpot.view.screens.delegate.AddRaffleFragment;
+import irongate.checkpot.view.screens.delegate.NotActivatedFragment;
+import irongate.checkpot.view.screens.delegate.aboutWinner.WinnersFragment;
+import irongate.checkpot.view.screens.delegate.editPlace.EditPlaceFragment;
+import irongate.checkpot.view.screens.player.ProfileFragment;
+import irongate.checkpot.view.screens.player.map.MapFragment;
+import irongate.checkpot.view.screens.player.rafles.RafflesFragment;
+import irongate.checkpot.view.screens.player.registration.WelcomeFragment;
+import irongate.checkpot.view.screens.player.tutorial.TutorialFragment;
+
+public class MainFragment extends SmartFragment implements SideMenuFragment.Listener, MenuFragment.Listener, ScreensManager.Listener, SwipeDetector.Listener, User.ModeChangeListener, IMainFragment {
+
+    private RelativeLayout contSwipe;
+    private ScreensManager screensManager;
+    private MenuFragment menu;
+    private SideMenuFragment side;
+    private ScreensaverFragment screensaver;
+
+    public MainFragment() {
+        super(R.layout.fragment_main);
+    }
+
+    @Override
+    protected void onReady() {
+        contSwipe = (RelativeLayout) findViewById(R.id.cont_swipe);
+
+        side = (SideMenuFragment) getChildFragmentManager().findFragmentById(R.id.frag_side);
+        menu = (MenuFragment) getChildFragmentManager().findFragmentById(R.id.frag_menu);
+        screensaver = (ScreensaverFragment) getChildFragmentManager().findFragmentById(R.id.frag_saver);
+
+        screensManager = new ScreensManager((AppCompatActivity) getActivity(), this);
+
+        getUser().setModeChangeListener(this);
+        side.setListener(this);
+        menu.setListener(this);
+        screensManager.setListener(this);
+    }
+
+    public void startScreens() {
+        initSwipe();
+
+//        Preferences.setFirstStartMap(getContext(), true);
+        if (getUser().isFirstStart()) {
+            openScreen(new TutorialFragment());
+            return;
+        }
+
+        if (!getUser().isAuthorized()) {
+            WelcomeFragment fragment = new WelcomeFragment();
+            fragment.setEnter(!getUser().isFirstStart());
+            openScreen(fragment);
+            return;
+        }
+
+        if (MainActivity.DEBUG_TEST_SCREEN != null) {
+            openScreen(MainActivity.DEBUG_TEST_SCREEN);
+            return;
+        }
+
+        screensaver.show(getResources().getString(R.string.register2_txt_wait));
+<<<<<<< working copy
+        CheckpotAPI.getCurrentUser(ok -> {
+=======
+        getUser().updateUser(ok -> {
+>>>>>>> merge rev
+            if (ok) {
+                contSwipe.post(() -> {
+                    hideScreensaver();
+                    openScreen(new MapFragment());
+                });
+            } else {
+                Toast.makeText(getContext(), R.string.error_auth, Toast.LENGTH_SHORT).show();
+                WelcomeFragment fragment = new WelcomeFragment();
+                fragment.setEnter(!getUser().isFirstStart());
+                openScreen(fragment);
+            }
+        });
+    }
+
+    private void initSwipe() {
+//        contSwipe.setOnTouchListener(new SwipeDetector(this, contSwipe.getWidth() / 2));
+    }
+
+    private User getUser() {
+        return User.getUser();
+    }
+
+    private void openScreen(ScreenFragment screen) {
+        screensManager.openScreen(screen, false);
+    }
+
+    private void openScreen(ScreenFragment screen, boolean force) {
+        screensManager.openScreen(screen, force);
+    }
+
+    @Override
+    public void onModeChanged() {
+        side.onModeChanged();
+        menu.onModeChanged();
+    }
+
+    @Override
+    public void onMenuClick(int index) {
+        boolean delegate = getUser().isDelegateMode();
+        switch (index) {
+            case 0:
+                menu.setCursor(index);
+                if (!side.isOpened())
+                    side.show();
+                else
+                    side.hide();
+                break;
+            case 1:
+                openScreen(delegate ? new RafflesFragment().setDelegateScreen(true) : new MapFragment());
+                side.hide();
+                break;
+
+            case 2:
+                if (delegate)
+                    onAddRaffleBtn();
+                else
+                    openScreen(new RafflesFragment());
+                side.hide();
+                break;
+
+            case 3:
+                if (delegate)
+                    openScreen(new WinnersFragment());
+                else
+                    openScreen(new RafflesFragment());
+                side.hide();
+                break;
+
+            case 4:
+                if (!delegate) {
+                    openScreen(new ProfileFragment());
+                }
+                else {
+                    Place place = getUser().getPlace();
+                    if (place == null)
+                        openScreen(new EditPlaceFragment());
+                    else
+                        openScreen(new PlaceFragment().setDelegateScreen(true));
+                }
+                side.hide();
+                break;
+        }
+    }
+
+    private void onAddRaffleBtn() {
+        if (getUser().isActive()) {
+            openScreen(new AddRaffleFragment());
+            return;
+        }
+
+        showScreensaver("");
+<<<<<<< working copy
+        CheckpotAPI.getCurrentUser(ok -> {
+=======
+        getUser().updateUser(ok -> {
+>>>>>>> merge rev
+            hideScreensaver();
+            openScreen(getUser().isActive() ? new AddRaffleFragment() : new NotActivatedFragment());
+        });
+    }
+
+    @Override
+    public void onSideScreen(ScreenFragment fragment) {
+        openScreen(fragment);
+    }
+
+    @Override
+    public void onSideScreen(ScreenFragment fragment, boolean force) {
+        openScreen(fragment, force);
+    }
+
+    @Override
+    public void onOpenScreen(ScreenFragment screen) {
+        menu.show(screen.isMenuShown());
+
+        if (screen instanceof MapFragment) {
+            menu.setCursor(1);
+        } else if (screen instanceof RafflesFragment) {
+            menu.setCursor(screen.isDelegateScreen() ? 1 : 2);
+        } else if (screen instanceof WinnersFragment) {
+            menu.setCursor(3);
+        } else if (screen instanceof ProfileFragment) {
+            menu.setCursor(4);
+        } else if (screen instanceof EditPlaceFragment) {
+            menu.setCursor(4);
+        }
+    }
+
+    @Override
+    public void showScreensaver(String title) {
+        screensaver.show(title);
+    }
+
+    @Override
+    public void hideScreensaver() {
+        screensaver.hide();
+    }
+
+    @Override
+    public void showMenu() {
+        menu.show();
+    }
+
+    @Override
+    public void hideMenu() {
+        menu.hide();
+    }
+
+    @Override
+    public void onSideMenuHide() {
+        menu.setPreviousCursor();
+    }
+
+    @Override
+    public void onSwipeRight() {
+        side.show();
+        Log.d("IRON", "MainActivity.onSwipeRight() ");
+    }
+
+    @Override
+    public void onSwipeLeft() {
+        Log.d("IRON", "MainActivity.onSwipeLeft() ");
+    }
+
+    @Override
+    public void onSwipeUp() {
+
+    }
+
+    @Override
+    public void onSwipeDown() {
+
+    }
+
+    @Override
+    public boolean onBackPressed() {
+        return side.onBackPressed() || screensManager.onBackPressed();
+    }
+}

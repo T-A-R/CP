@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cont"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/iceBlue"
+    android:focusableInTouchMode="true"
+    android:paddingLeft="@dimen/_15sdp"
+    android:paddingRight="@dimen/_15sdp"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/_42sdp"
+            android:layout_height="@dimen/_42sdp"
+            android:layout_marginTop="@dimen/_28sdp"
+            android:background="@drawable/bg_circle_yellow"
+            android:padding="@dimen/_16sdp"
+            android:scaleType="fitCenter"
+            android:tint="@android:color/black"
+            app:srcCompat="@drawable/ico_back" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:gravity="center_vertical"
+            android:text="@string/title_text_data_company"
+            android:textColor="@android:color/black"
+            fontPath="futura_pt_book.ttf"
+            android:textSize="@dimen/_26ssp"
+            tools:ignore="MissingPrefix" />
+
+        <LinearLayout
+            android:id="@+id/panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/bg_panel_5"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_inn"
+                fontPath="futura_pt_book.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginRight="22dp"
+                android:alpha="0.3"
+                android:text="@string/info_title_innkpp"
+                android:textColor="@android:color/black"
+                android:textSize="17sp"
+                tools:ignore="MissingPrefix" />
+
+            <br.com.sapereaude.maskedEditText.MaskedEditText
+                android:id="@+id/edit_inn"
+                fontPath="futura_pt_book.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bg_selector_blue"
+                android:ems="10"
+                android:enabled="false"
+                android:hint="@string/info_hint_innkpp"
+                android:inputType="datetime"
+                android:padding="16dp"
+                android:textSize="22sp"
+                app:allowed_chars="1234567890"
+                app:mask="@string/info_mask_innkpp"
+                tools:ignore="MissingPrefix" />
+
+            <TextView
+                android:id="@+id/title_name"
+                fontPath="futura_pt_book.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginRight="22dp"
+                android:alpha="0.3"
+                android:text="@string/info_title_name"
+                android:textColor="@android:color/black"
+                android:textSize="17sp"
+                tools:ignore="MissingPrefix" />
+
+            <irongate.checkpot.view.screens.delegate.companyRegistration.PawEditNarrowView
+                android:id="@+id/edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+            </irongate.checkpot.view.screens.delegate.companyRegistration.PawEditNarrowView>
+
+            <TextView
+                android:id="@+id/title_form"
+                fontPath="futura_pt_book.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginRight="22dp"
+                android:alpha="0.3"
+                android:text="@string/info_title_form"
+                android:textColor="@android:color/black"
+                android:textSize="17sp"
+                tools:ignore="MissingPrefix" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp">
+
+                <irongate.checkpot.view.NoDefaultSpinner
+                    android:id="@+id/spinner_form"
+                    fontPath="futura_pt_book.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:background="@drawable/bg_selector_green"
+                    android:entries="@array/inf_forms"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:prompt="@string/info_hint_form"
+                    tools:ignore="MissingPrefix" />
+
+                <ImageView
+                    android:layout_width="11dp"
+                    android:layout_height="6dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="21dp"
+                    app:srcCompat="@drawable/ico_dropdown" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/title_ogrn"
+                fontPath="futura_pt_book.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginRight="22dp"
+                android:alpha="0.3"
+                android:text="@string/info_title_ogrn"
+                android:textColor="@android:color/black"
+                android:textSize="17sp"
+                tools:ignore="MissingPrefix" />
+
+            <irongate.checkpot.view.screens.delegate.companyRegistration.PawEditNarrowView
+                android:id="@+id/edit_ogrn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+            </irongate.checkpot.view.screens.delegate.companyRegistration.PawEditNarrowView>
+
+            <TextView
+                android:id="@+id/title_address"
+                fontPath="futura_pt_book.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginRight="22dp"
+                android:alpha="0.3"
+                android:text="@string/info_title_address"
+                android:textColor="@android:color/black"
+                android:textSize="17sp"
+                tools:ignore="MissingPrefix" />
+
+            <!--<EditText-->
+            <!--android:id="@+id/edit_address"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="193dp"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:layout_marginRight="20dp"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:background="@drawable/bg_selector_blue"-->
+            <!--android:ems="10"-->
+            <!--android:gravity="top"-->
+            <!--android:hint="@string/info_hint_address"-->
+            <!--android:inputType="textMultiLine"-->
+            <!--android:padding="16dp"-->
+            <!--android:textSize="22sp"-->
+            <!--fontPath="futura_pt_book.ttf"-->
+            <!--tools:ignore="MissingPrefix" />-->
+
+            <irongate.checkpot.view.screens.delegate.companyRegistration.PawEditNarrowView
+                android:id="@+id/edit_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+            </irongate.checkpot.view.screens.delegate.companyRegistration.PawEditNarrowView>
+
+            <TextView
+                android:id="@+id/title_fio"
+                fontPath="futura_pt_book.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginRight="22dp"
+                android:alpha="0.3"
+                android:text="@string/info_title_fio"
+                android:textColor="@android:color/black"
+                android:textSize="17sp"
+                tools:ignore="MissingPrefix" />
+
+            <irongate.checkpot.view.screens.delegate.companyRegistration.PawEditNarrowView
+                android:id="@+id/edit_fio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"></irongate.checkpot.view.screens.delegate.companyRegistration.PawEditNarrowView>
+
+            <Button
+                android:id="@+id/btn"
+                fontPath="futura_pt_book.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_btn_blue_36"
+                android:text="@string/step_three"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:visibility="visible"
+                tools:ignore="MissingPrefix" />
+        </LinearLayout>
+
+        <irongate.checkpot.view.screens.delegate.companyRegistration.PopupViewSmall
+            android:id="@+id/popup_view_small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp"></irongate.checkpot.view.screens.delegate.companyRegistration.PopupViewSmall>
+    </LinearLayout>
+</ScrollView>
+

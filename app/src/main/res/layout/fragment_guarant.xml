@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cont_guarant"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6974E0"
+    android:clipChildren="false"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:id="@+id/cont_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="130dp">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@color/blue" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/bg_guarant_yellow" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="180dp"
+                android:layout_alignParentBottom="true"
+                app:srcCompat="@drawable/bg_guarant_leaf" />
+
+            <ImageView
+                android:id="@+id/img_dog"
+                android:layout_width="230dp"
+                android:layout_height="200dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="1dp"
+                android:scaleType="fitEnd"
+                android:translationX="60dp"
+                app:srcCompat="@drawable/anim_dog_win1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="1dp"
+                app:srcCompat="@drawable/img_guarant_prize" />
+
+        </RelativeLayout>
+
+        <irongate.checkpot.view.screens.player.event.DetailBgSmall
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp">
+
+            <ImageView
+                android:id="@+id/img_photo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp" />
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="130dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/details_guaranteed_desc_test"
+                android:textColor="@android:color/black"
+                android:textSize="22sp" />
+
+        </irongate.checkpot.view.screens.player.event.DetailBgSmall>
+
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitStart"
+        app:srcCompat="@drawable/bg_flags" />
+
+    <TextView
+        android:id="@+id/txt_guarant_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:text="@string/guarant_title"
+        android:textColor="@android:color/white"
+        android:textSize="40sp" />
+
+    <Button
+        android:id="@+id/btn_guarant"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="65dp"
+        android:background="@drawable/bg_btn_yellow_36"
+        android:text="@string/winner_btn_inst"
+        android:textColor="@android:color/black"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/txt_guarant_prizes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="@string/winner_prizes"
+        android:textColor="@android:color/white"
+        android:textSize="22sp" />
+
+    <RelativeLayout
+        android:id="@+id/cont_guarant_confetti"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false">
+
+    </RelativeLayout>
+</RelativeLayout>

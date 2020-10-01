@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/iceBlue"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:padding="@dimen/_6sdp"
+    android:theme="@style/BlueTheme">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbarStyle="outsideOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="@string/add_raffles_title"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_31sdp" />
+
+
+            <TextView
+                android:id="@+id/txt_type_raffles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="@string/type_raffles"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_16ssp" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_type_raffles"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginRight="@dimen/_12sdp"
+                android:elevation="8dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tariff1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_cardview_blue_left_8"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/btn_to_time"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_14ssp" />
+
+                    <TextView
+                        android:id="@+id/tariff2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/btn_to_amt"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_14ssp" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tabs"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginRight="@dimen/_12sdp"
+                android:elevation="8dp"
+                app:cardCornerRadius="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/edit_member"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        android:background="@drawable/bg_selector_blue"
+                        android:ems="10"
+                        android:hint="0"
+                        android:inputType="number"
+                        android:padding="@dimen/_14sdp"
+                        android:textSize="@dimen/_16ssp"
+                        android:visibility="gone" />
+
+                    <RadioGroup
+                        android:id="@+id/radio_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/edit_member"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp">
+
+                        <RadioButton
+                            android:id="@+id/radio_btn_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:checked="true"
+                            android:text="@string/tariff_1_day"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/_16ssp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_btn_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:text="@string/tariff_7_days"
+                            android:textSize="@dimen/_16ssp"
+                            android:visibility="visible" />
+
+                        <RadioButton
+                            android:id="@+id/radio_btn_three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:layout_marginBottom="@dimen/_12sdp"
+                            android:text="@string/tariff_30_days"
+                            android:textSize="@dimen/_16ssp" />
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/txt_amt_member"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radio"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="@string/tariff_adds"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_16ssp" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/adds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_amt_member"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginRight="@dimen/_12sdp"
+                android:elevation="8dp"
+                android:visibility="visible"
+                app:cardCornerRadius="8dp">
+
+                <ListView
+                    android:id="@+id/listview_adds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </ListView>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/txt_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/adds"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="0 руб"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_30ssp" />
+
+            <TextView
+                android:id="@+id/txt_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_price"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/tariff_total"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_12ssp" />
+
+            <Button
+                android:id="@+id/btn_publication"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_below="@id/txt_total"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@drawable/bg_btn_blue_36"
+                android:text="@string/continue_payment"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_16ssp" />
+
+            <TextView
+                android:id="@+id/txt_back_to_step_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_publication"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_70sdp"
+                android:text="@string/back_to_step"
+                android:textColor="@color/blue"
+                android:textSize="18sp" />
+
+
+        </RelativeLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@drawable/anim_dog_side1" android:duration="40"/>
+    <item android:drawable="@drawable/anim_dog_side2" android:duration="40"/>
+    <item android:drawable="@drawable/anim_dog_side3" android:duration="40"/>
+    <item android:drawable="@drawable/anim_dog_side4" android:duration="40"/>
+    <item android:drawable="@drawable/anim_dog_side5" android:duration="40"/>
+    <item android:drawable="@drawable/anim_dog_side6" android:duration="40"/>
+    <item android:drawable="@drawable/anim_dog_side7" android:duration="40"/>
+    <item android:drawable="@drawable/anim_dog_side8" android:duration="40"/>
+    <item android:drawable="@drawable/anim_dog_side9" android:duration="40"/>
+    <item android:drawable="@drawable/anim_dog_side10" android:duration="40"/>
+    <item android:drawable="@drawable/anim_dog_side11" android:duration="40"/>
+    <item android:drawable="@drawable/anim_dog_side12" android:duration="40"/>
+    <item android:drawable="@drawable/anim_dog_side11" android:duration="40"/>
+    <item android:drawable="@drawable/anim_dog_side10" android:duration="40"/>
+    <item android:drawable="@drawable/anim_dog_side9" android:duration="40"/>
+    <item android:drawable="@drawable/anim_dog_side8" android:duration="40"/>
+    <item android:drawable="@drawable/anim_dog_side7" android:duration="40"/>
+    <item android:drawable="@drawable/anim_dog_side6" android:duration="40"/>
+    <item android:drawable="@drawable/anim_dog_side5" android:duration="40"/>
+    <item android:drawable="@drawable/anim_dog_side4" android:duration="40"/>
+    <item android:drawable="@drawable/anim_dog_side3" android:duration="40"/>
+    <item android:drawable="@drawable/anim_dog_side2" android:duration="40"/>
+</animation-list>

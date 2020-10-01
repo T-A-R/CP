@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_cont"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/cont_swipe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/cont_screen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </RelativeLayout>
+
+        <android.support.design.widget.NavigationView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:layout_gravity="start">
+
+            <include layout="@layout/fragment_side_menu2" />
+
+
+
+        </android.support.design.widget.NavigationView>
+
+
+
+    </android.support.v4.widget.DrawerLayout>
+
+    <!--<fragment-->
+        <!--android:id="@+id/frag_side"-->
+        <!--android:name="irongate.checkpot.view.SideMenuFragment"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--/>-->
+
+    <fragment
+        android:id="@+id/frag_notification"
+        android:name="irongate.checkpot.view.NotificationFragment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        />
+
+    <fragment
+        android:id="@+id/frag_menu"
+        android:name="irongate.checkpot.view.MenuFragment"
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:layout_alignParentBottom="true" />
+
+    <fragment
+        android:id="@+id/frag_saver"
+        android:name="irongate.checkpot.view.ScreensaverFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

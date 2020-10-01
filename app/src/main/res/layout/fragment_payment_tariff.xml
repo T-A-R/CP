@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/iceBlue">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/payment_method_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginRight="15dp"
+                android:text="@string/payment_method_title"
+                android:textColor="@android:color/black"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/payment_method_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/payment_method_subtitle"
+                android:textColor="@android:color/black"
+                android:textSize="22sp" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="25dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/cont_bank_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/bg_rectangle_white"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/ic_bank_card"
+                            android:layout_width="24dp"
+                            android:layout_height="16dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="33dp"
+                            android:src="@drawable/ic_bank_card" />
+
+                        <TextView
+                            android:id="@+id/bank_card_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="96dp"
+                            android:layout_marginTop="15dp"
+                            android:text="@string/bank_card_title"
+                            android:textColor="@android:color/black"
+                            android:textSize="22dp" />
+
+                        <TextView
+                            android:id="@+id/bank_card_subtitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="96dp"
+                            android:layout_marginBottom="15dp"
+                            android:text="@string/bank_card_subtitle"
+                            android:textSize="18dp" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="#f2f2f2"
+                            android:padding="21dp" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cont_yandex_pay"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/bg_rectangle_white"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/ic_yandex_pay"
+                            android:layout_width="50dp"
+                            android:layout_height="18dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="22dp"
+                            android:src="@drawable/ic_yandex_pay" />
+
+                        <TextView
+                            android:id="@+id/yandex_pay_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="96dp"
+                            android:layout_marginTop="15dp"
+                            android:text="@string/yandex_money_title"
+                            android:textColor="@android:color/black"
+                            android:textSize="22dp" />
+
+                        <TextView
+                            android:id="@+id/yandex_pay_subtitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="96dp"
+                            android:layout_marginBottom="15dp"
+                            android:text="@string/payment_subtitle"
+                            android:textSize="18dp" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="#f2f2f2"
+                            android:padding="21dp" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cont_google_pay"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/bg_rectangle_white"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/ic_google_pay"
+                            android:layout_width="51dp"
+                            android:layout_height="21dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="23dp"
+                            android:src="@drawable/ic_google_pay" />
+
+                        <TextView
+                            android:id="@+id/google_pay_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="96dp"
+                            android:layout_marginTop="15dp"
+                            android:text="@string/google_pay_title"
+                            android:textColor="@android:color/black"
+                            android:textSize="22dp" />
+
+                        <TextView
+                            android:id="@+id/google_pay_subtitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="96dp"
+                            android:layout_marginBottom="15dp"
+                            android:text="@string/payment_subtitle"
+                            android:textSize="18dp" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="#f2f2f2"
+                            android:padding="21dp" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cont_qiwi"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/bg_rectangle_white"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/ic_qiwi"
+                            android:layout_width="50dp"
+                            android:layout_height="19dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="23dp"
+                            android:src="@drawable/ic_qiwi" />
+
+                        <TextView
+                            android:id="@+id/qiwi_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="96dp"
+                            android:layout_marginTop="15dp"
+                            android:text="@string/qiwi_money_title"
+                            android:textColor="@android:color/black"
+                            android:textSize="22dp" />
+
+                        <TextView
+                            android:id="@+id/qiwi_subtitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="96dp"
+                            android:layout_marginBottom="15dp"
+                            android:text="@string/payment_subtitle"
+                            android:textSize="18dp" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

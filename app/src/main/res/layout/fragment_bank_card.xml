@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/iceBlue"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/bg_circle_yellow"
+            android:padding="16dp"
+            android:scaleType="fitCenter"
+            android:tint="@android:color/black"
+            app:srcCompat="@drawable/ico_back" />
+
+        <TextView
+            android:id="@+id/card_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:gravity="left"
+            android:text="@string/bank_card_title"
+            android:textColor="@android:color/black"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/card_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="left"
+            android:text="@string/card_description"
+            android:textColor="@android:color/black"
+            android:textSize="22sp" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="40dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_number_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginTop="40dp"
+                    android:text="@string/card_number"
+                    android:textSize="18sp" />
+
+                <br.com.sapereaude.maskedEditText.MaskedEditText
+                    android:id="@+id/et_number_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/bg_selector_blue"
+                    android:hint="@string/card_number_hint"
+                    android:inputType="number"
+                    android:padding="15dp"
+                    android:textSize="22sp"
+                    app:keep_hint="true"
+                    app:mask="#### #### #### ####" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_validity_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="23dp"
+                        android:layout_marginTop="40dp"
+                        android:text="@string/card_validity"
+                        android:textSize="18sp" />
+
+                    <br.com.sapereaude.maskedEditText.MaskedEditText
+                        android:id="@+id/et_validity_card"
+                        android:layout_width="143dp"
+                        android:layout_height="63dp"
+                        android:layout_below="@+id/tv_validity_card"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="18dp"
+                        android:background="@drawable/bg_selector_blue"
+                        android:hint="@string/card_validity_hint"
+                        android:inputType="number"
+                        android:padding="15dp"
+                        android:textSize="22sp"
+                        app:keep_hint="true"
+                        app:mask="## / ##" />
+
+                    <TextView
+                        android:id="@+id/tv_cvv"
+                        android:layout_width="106dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_toRightOf="@+id/tv_validity_card"
+                        android:text="@string/cvv"
+                        android:textSize="18sp" />
+
+                    <br.com.sapereaude.maskedEditText.MaskedEditText
+                        android:id="@+id/et_cvv"
+                        android:layout_width="match_parent"
+                        android:layout_height="63dp"
+                        android:layout_below="@id/tv_cvv"
+                        android:layout_marginLeft="45dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_toRightOf="@+id/tv_validity_card"
+                        android:background="@drawable/bg_selector_blue"
+                        android:hint="@string/cvv_hint"
+                        android:inputType="number"
+                        android:padding="15dp"
+                        android:textSize="22sp"
+                        app:keep_hint="true"
+                        app:mask="###" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_card_owner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginTop="40dp"
+                    android:text="@string/card_owner"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/et_card_owner"
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/bg_selector_blue"
+                    android:hint="@string/card_owner_hint"
+                    android:inputType="textCapCharacters"
+                    android:padding="15dp"
+                    android:textAllCaps="true"
+                    android:textSize="22sp" />
+
+                <Button
+                    android:id="@+id/btn_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginBottom="40dp"
+                    android:background="@drawable/bg_btn_blue_36"
+                    android:text="@string/card_add"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

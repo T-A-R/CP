@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="12dp"
+    android:layout_marginTop="20dp">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/fon_raffle"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/fon_raffle_gradient"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/raffle_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="21dp"
+        android:textColor="@android:color/white"
+        android:textSize="32dp"
+        fontPath="futura_pt_book.ttf"
+        tools:ignore="MissingPrefix"/>
+
+    <LinearLayout
+        android:id="@+id/rl_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/raffle_name"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/id_raffle_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:textColor="@android:color/white"
+            android:text="Id: "
+            fontPath="futura_pt_book.ttf"
+            tools:ignore="MissingPrefix"/>
+
+        <TextView
+            android:id="@+id/id_raffle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            fontPath="futura_pt_book.ttf"
+            tools:ignore="MissingPrefix"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:layout_marginRight="15dp">
+        <ImageView
+            android:id="@+id/iv_date"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/stopwatch" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="@android:color/white"
+            fontPath="futura_pt_book.ttf"
+            tools:ignore="MissingPrefix"/>
+    </LinearLayout>
+    </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_winner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_description">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+</RelativeLayout>
+
+</android.support.v7.widget.CardView>

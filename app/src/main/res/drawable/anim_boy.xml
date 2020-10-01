@@ -1,0 +1,19 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@drawable/anim_boy1" android:duration="40"/>
+    <item android:drawable="@drawable/anim_boy2" android:duration="40"/>
+    <item android:drawable="@drawable/anim_boy3" android:duration="40"/>
+    <item android:drawable="@drawable/anim_boy4" android:duration="40"/>
+    <item android:drawable="@drawable/anim_boy5" android:duration="40"/>
+    <item android:drawable="@drawable/anim_boy6" android:duration="40"/>
+    <item android:drawable="@drawable/anim_boy7" android:duration="40"/>
+    <item android:drawable="@drawable/anim_boy8" android:duration="40"/>
+    <item android:drawable="@drawable/anim_boy9" android:duration="40"/>
+    <item android:drawable="@drawable/anim_boy8" android:duration="40"/>
+    <item android:drawable="@drawable/anim_boy7" android:duration="40"/>
+    <item android:drawable="@drawable/anim_boy6" android:duration="40"/>
+    <item android:drawable="@drawable/anim_boy5" android:duration="40"/>
+    <item android:drawable="@drawable/anim_boy4" android:duration="40"/>
+    <item android:drawable="@drawable/anim_boy3" android:duration="40"/>
+    <item android:drawable="@drawable/anim_boy2" android:duration="40"/>
+</animation-list>
